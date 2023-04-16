@@ -11,13 +11,13 @@ export function Header() {
 
           <nav className="flex gap-2">
             <a
-              className="p-2 border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-700 transition-color outline-none "
+              className="p-2 text-white border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-400 transition-color outline-none"
               href="#"
             >
               Home
             </a>
             <a
-              className="p-2 border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-700 transition-color outline-none "
+              className="p-2 text-white border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-400 transition-color outline-none"
               href="#"
             >
               Cardápio
@@ -29,7 +29,7 @@ export function Header() {
               <MapPin size={24} weight="fill" />
               São Paulo, SP
             </span>
-            <button className="p-2 rounded outline-none hocus:text-primary-600 focus-visible:ring ring-primary-400">
+            <button className="p-2 text-white rounded outline-none hocus:text-primary-400 focus-visible:ring ring-primary-400">
               <ShoppingCart size={24} />
             </button>
           </div>
