@@ -1,10 +1,13 @@
+// PAGE
+import { Home } from './pages/Home'
+
 // COMPONENT
 import { Header } from './components/Header'
 
 export function App() {
   return (
     <>
-      <div className="grid grid-rows-[max-content_1fr] relative overflow-hidden min-h-[100dvh] bg-black/60">
+      <div className="grid grid-rows-[max-content_1fr] relative overflow-hidden min-h-[100dvh] bg-black/50">
         <Header />
         <p className="px-6 place-self-center font-bold text-white text-6xl text-center">
           We love to make coffee for you
@@ -23,6 +26,7 @@ export function App() {
           />
         </video>
       </div>
+      <Home />
     </>
   )
 }
