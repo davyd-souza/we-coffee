@@ -19,6 +19,7 @@ export function App() {
           autoPlay
           muted
           loop
+          tabIndex={-1}
         >
           <source
             src="https://we-coffee.s3.sa-east-1.amazonaws.com/we-coffee_bg.mp4"
