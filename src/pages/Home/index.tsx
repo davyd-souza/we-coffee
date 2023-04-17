@@ -6,6 +6,7 @@ import churroImg from '../../assets/churro-img.webp'
 import liberdadeStore from '../../assets/liberdade-store.webp'
 import lorenaStore from '../../assets/lorena-store.webp'
 import liberdadeInsideStore from '../../assets/liberdade-inside-store.webp'
+import teamImg from '../../assets/team-img.webp'
 
 export function Home() {
   return (
@@ -141,17 +142,30 @@ export function Home() {
         </div>
       </section>
 
-      <section>
-        <div>
-          <h2>Faça parte da nossa equipe</h2>
-          <p>
-            Acreditamos que pessoas fazem a diferença! Venha fazer a diferença
-            conosco. Todos os talentos são bem vindos aqui, queremos te
-            conhecer.
-          </p>
-          <a href="#">Junte-se a nós</a>
+      <section className="bg-primary-100">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 items-center gap-4">
+          <div className="grid gap-4">
+            <h2 className="text-3xl text-primary-700 font-bold">
+              Faça parte da nossa equipe
+            </h2>
+            <p className="text-primary-600">
+              Acreditamos que pessoas fazem a diferença! Venha fazer a diferença
+              conosco. Todos os talentos são bem vindos aqui, queremos te
+              conhecer.
+            </p>
+            <a
+              className="py-2 px-4 rounded-full text-white bg-primary-700 hocus:bg-primary-600 transition-colors outline-none focus-visible:ring ring-primary-600 ring-offset-2 ring-offset-primary-100 justify-self-start"
+              href="#"
+            >
+              Junte-se a nós
+            </a>
+          </div>
+          <img
+            className="max-w-[30rem]"
+            src={teamImg}
+            alt="Person delivering a paper bag and a cup"
+          />
         </div>
-        <img src="" alt="" />
       </section>
     </main>
   )
