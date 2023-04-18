@@ -1,13 +1,13 @@
 // ASSETS
 import { MapPin, ShoppingCart } from 'phosphor-react'
-import weCoffeeLogo from '../../assets/we-coffee.svg'
+import { ReactComponent as WeCoffeeLogo } from '../../assets/we-coffee.svg'
 
 export function Header() {
   return (
     <header className="py-4">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex justify-between items-center">
-          <img className="w-12 aspect-square" src={weCoffeeLogo} alt="" />
+          <WeCoffeeLogo className="w-12 h-12 fill-primary-400" />
 
           <nav className="flex gap-2">
             <a
