@@ -17,18 +17,18 @@ export function Home() {
         </h2>
 
         <div className="grid grid-cols-3 gap-4">
-          <article className="grid place-items-center px-4 py-32 relative overflow-hidden bg-black/30">
+          <article className="grid place-items-center px-4 py-32 relative overflow-hidden bg-black/30 group">
             <img
-              className="absolute -z-10 min-h-full min-w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover"
+              className="absolute -z-10 min-h-full min-w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover group-hover:scale-105 transition-transform"
               src={drinkBanner}
               alt="Two cups of drinks with some blueberries, strawberries, raspberries and cherries spread on table."
             />
             <h3 className="text-2xl text-white font-bold">Bebidas</h3>
           </article>
 
-          <article className="grid place-items-center px-4 py-32 relative overflow-hidden bg-black/30">
+          <article className="grid place-items-center px-4 py-32 relative overflow-hidden bg-black/30 group">
             <img
-              className="absolute -z-10 min-h-full min-w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover"
+              className="absolute -z-10 min-h-full min-w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover group-hover:scale-105 transition-transform"
               src={sweetBanner}
               alt="Strawberries spread on top a table with a box containing a pink churro with strawberry as filling"
             />
@@ -143,7 +143,7 @@ export function Home() {
       </section>
 
       <section className="bg-primary-100">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 items-center gap-4">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 items-center gap-4 pt-6">
           <div className="grid gap-4">
             <h2 className="text-3xl text-primary-700 font-bold">
               Faça parte da nossa equipe
