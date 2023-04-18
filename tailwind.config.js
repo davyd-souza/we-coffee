@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         sans: 'Inter, sans-serif',
+        brand: 'Montserrat, sans-serif',
       },
       colors: {
         primary: {
