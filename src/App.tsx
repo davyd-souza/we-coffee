@@ -3,6 +3,7 @@ import { Home } from './pages/Home'
 
 // COMPONENT
 import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 
 export function App() {
   return (
@@ -28,6 +29,7 @@ export function App() {
         </video>
       </div>
       <Home />
+      <Footer />
     </>
   )
 }
