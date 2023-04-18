@@ -11,13 +11,13 @@ export function Header() {
 
           <nav className="flex gap-2">
             <a
-              className="p-2 text-white border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-400 transition-color outline-none"
+              className="p-2 text-white border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-400 transition-all outline-none"
               href="#"
             >
               Home
             </a>
             <a
-              className="p-2 text-white border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-400 transition-color outline-none"
+              className="p-2 text-white border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-400 transition-all outline-none"
               href="#"
             >
               Cardápio
