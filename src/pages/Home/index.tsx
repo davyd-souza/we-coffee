@@ -1,5 +1,4 @@
 // ASSET
-import separationBanner from '../../assets/separator-banner.webp'
 import churroImg from '../../assets/churro-img.webp'
 import liberdadeStore from '../../assets/liberdade-store.webp'
 import lorenaStore from '../../assets/lorena-store.webp'
@@ -8,25 +7,13 @@ import teamImg from '../../assets/team-img.webp'
 
 // COMPONENT
 import { ProductsSection } from './components/ProductsSection'
+import { BannerSection } from './components/BannerSection'
 
 export function Home() {
   return (
     <main className="grid gap-20">
       <ProductsSection />
-
-      <section className="relative overflow-hidden bg-black/30">
-        <img
-          className="absolute -z-10 min-h-full min-w-full object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-          src={separationBanner}
-          alt="A balcon with cups piled up with the store on the background blurred"
-        />
-        <div className="max-w-6xl mx-auto px-6 p-40">
-          <p className="text-center text-2xl font-bold text-white">
-            Unidos à arquitetura conceitual, futurista e minimalista,
-            proporcionamos uma experiência de imersão gastronômica diferenciada.
-          </p>
-        </div>
-      </section>
+      <BannerSection />
 
       <section className="max-w-6xl mx-auto px-6">
         <h2 className="text-center font-light text-primary-700 text-sm tracking-wider uppercase">
