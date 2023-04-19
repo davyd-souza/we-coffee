@@ -1,11 +1,18 @@
+// DEPENDENCY
+import clsx from 'clsx'
+
 // ASSETS
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { ReactComponent as WeCoffeeLogo } from '../../assets/we-coffee.svg'
 
-export function Header() {
+// TYPE
+type HeaderProps = {
+  variant?: 'primary' | 'transparent'
+}
+export function Header({ variant = 'transparent' }: HeaderProps) {
   return (
-    <header className="py-4">
-      <div className="max-w-6xl mx-auto px-6">
+    <header className={clsx('', { 'bg-primary-700': variant === 'primary' })}>
+      <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <WeCoffeeLogo className="w-12 h-12 fill-primary-400" />
 
