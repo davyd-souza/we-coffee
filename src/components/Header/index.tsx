@@ -1,5 +1,6 @@
 // DEPENDENCY
 import clsx from 'clsx'
+import { NavLink } from 'react-router-dom'
 
 // ASSETS
 import { MapPin, ShoppingCart } from 'phosphor-react'
@@ -17,18 +18,18 @@ export function Header({ variant = 'transparent' }: HeaderProps) {
           <WeCoffeeLogo className="w-12 h-12 fill-primary-400" />
 
           <nav className="flex gap-2">
-            <a
-              className="p-2 text-white border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-400 transition-all outline-none"
-              href="#"
+            <NavLink
+              className="p-2 text-white border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-400 transition-all outline-none aria-[current=page]:text-primary-400 aria-[current=page]:border-b-primary-400"
+              to="/"
             >
               Home
-            </a>
-            <a
-              className="p-2 text-white border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-400 transition-all outline-none"
-              href="#"
+            </NavLink>
+            <NavLink
+              className="p-2 text-white border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-400 transition-all outline-none aria-[current=page]:text-primary-400 aria-[current=page]:border-b-primary-400"
+              to="/cardapio"
             >
               Cardápio
-            </a>
+            </NavLink>
           </nav>
 
           <div className="flex items-center justify-center gap-2">
