@@ -17,19 +17,25 @@ export function Header({ variant = 'transparent' }: HeaderProps) {
         <div className="flex justify-between items-center">
           <WeCoffeeLogo className="w-12 h-12 fill-primary-400" />
 
-          <nav className="flex gap-2">
-            <NavLink
-              className="p-2 text-white border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-400 transition-all outline-none aria-[current=page]:text-primary-400 aria-[current=page]:border-b-primary-400"
-              to="/"
-            >
-              Home
-            </NavLink>
-            <NavLink
-              className="p-2 text-white border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-400 transition-all outline-none aria-[current=page]:text-primary-400 aria-[current=page]:border-b-primary-400"
-              to="/cardapio"
-            >
-              Cardápio
-            </NavLink>
+          <nav aria-label="primary">
+            <ul className="flex gap-2">
+              <li>
+                <NavLink
+                  className="p-2 text-white border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-400 transition-all outline-none aria-[current=page]:text-primary-400 aria-[current=page]:border-b-primary-400"
+                  to="/"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className="p-2 text-white border-b-2 border-b-transparent hocus:border-b-primary-400 hocus:text-primary-400 transition-all outline-none aria-[current=page]:text-primary-400 aria-[current=page]:border-b-primary-400"
+                  to="/cardapio"
+                >
+                  Cardápio
+                </NavLink>
+              </li>
+            </ul>
           </nav>
 
           <div className="flex items-center justify-center gap-2">
