@@ -17,11 +17,23 @@ export default {
           700: '#584c3a',
           800: '#42392b',
         },
+        // primary: {
+        //   100: '#cbbcb1',
+        //   200: '#b09a8a',
+        //   300: '#967963',
+        //   400: '#7c573c',
+        //   600: '#634630',
+        //   700: '#4a3424',
+        //   800: '#322318',
+        // },
         secondary: {
           200: '#b5b7d6',
           400: '#8487BA',
           600: '#484A6E',
         },
+      },
+      gridTemplateColumns: {
+        'product-list': 'repeat(auto-fill, minmax(15rem, 1fr))',
       },
     },
   },
