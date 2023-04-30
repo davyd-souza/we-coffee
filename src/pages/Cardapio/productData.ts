@@ -507,6 +507,209 @@ const PRODUCT_DATA = {
       label: ['Gelado'],
     },
   ],
+  pao: [
+    {
+      id: '3a08bb70-1abd-4818-ae12-079029c13674',
+      name: 'Croissant Amêndoa',
+      description: 'Croissant com amêndoas laminadas.',
+      // amount: '480ml',
+      price: 16,
+      image: 'http://localhost:5173/assets/images/pao/croissant-amendoa.webp',
+      label: ['Salgado'],
+    },
+    {
+      id: 'd0f15045-3863-4558-8a87-8b2950b0dabd',
+      name: 'Croissant Choco Amêndoa',
+      description:
+        'Recheado de creme de amêndoas com nutella e finalizado com lâminas de amêndoas.',
+      // amount: '480ml',
+      price: 16,
+      image:
+        'http://localhost:5173/assets/images/pao/croissant-choco-amendoa.webp',
+      label: ['Doce'],
+    },
+    {
+      id: '6cb3326a-2c88-48ba-bb46-47710556ab7b',
+      name: 'Croissant Bacon',
+      description:
+        'Croissant com tomate, muçarela, tomate, rúcula, bacon e ketchup.',
+      // amount: '480ml',
+      price: 17,
+      image: 'http://localhost:5173/assets/images/pao/croissant-bacon.webp',
+      label: ['Salgado'],
+    },
+    {
+      id: '341dc9a1-17e3-427f-853f-7fec2370bb73',
+      name: 'Croissant Salame',
+      description:
+        'Croissant de massa folhada artesanal, cream cheese, salame e rúcula.',
+      // amount: '480ml',
+      price: 17,
+      image: 'http://localhost:5173/assets/images/pao/croissant-salame.webp',
+      label: ['Salgado'],
+    },
+    {
+      id: '3fd68a48-c9ef-4317-a32f-2f7f6970a611',
+      name: 'Croissant Tradicional',
+      description: 'Croissant tradicional sem recheio.',
+      // amount: '480ml',
+      price: 10,
+      image:
+        'http://localhost:5173/assets/images/pao/croissant-tradicional.webp',
+      label: ['Salgado'],
+    },
+    {
+      id: '375a656c-e3fc-4121-984e-99185643c885',
+      name: 'Baguete Presunto Cru & Pesto',
+      description: 'Baguete, presunto cru, rúcula e molho pesto.',
+      // amount: '480ml',
+      price: 18,
+      image:
+        'http://localhost:5173/assets/images/pao/baguete-presunto_cru-pesto.webp',
+      label: ['Salgado'],
+    },
+    {
+      id: 'ed899158-90e7-408b-ac18-f5550d6bb8a6',
+      name: 'Baguete Bresaola & Trufas',
+      description: 'Baguete, bresaola, molho de trufa negra e rúcula.',
+      // amount: '480ml',
+      price: 20,
+      image:
+        'http://localhost:5173/assets/images/pao/baguete-bresaola-trufas.webp',
+      label: ['Salgado'],
+    },
+    {
+      id: '9c03ec82-7f44-4bfc-95ff-919ae437b0ef',
+      name: 'Cannoli Parma Trufado',
+      description:
+        'Massa folhada crocante, recheado com creme de queijo trufado e pequenas lascas de presunto cru.',
+      // amount: '480ml',
+      price: 17,
+      image:
+        'http://localhost:5173/assets/images/pao/cannoli-parma-trufado.webp',
+      label: ['Salgado'],
+    },
+    {
+      id: 'fb68c86a-a447-4d9e-bf78-9e4d5d0e3810',
+      name: 'Cannoli Dark',
+      description:
+        'Massa folhada crocante, com recheio suave a base de creme de baunilha e chocolate ao leite, coberto com chocolate dark e crispearl crocante.',
+      // amount: '480ml',
+      price: 17,
+      image: 'http://localhost:5173/assets/images/pao/cannoli-dark.webp',
+      label: ['Doce'],
+    },
+    {
+      id: 'e2d68c32-200f-47eb-8e1d-68f515a1aaac',
+      name: 'Cannoli Cream',
+      description:
+        'Massa folhada crocante, com recheio suave a base de creme de baunilha e chocolate branco, coberto com chocolate branco e crocante de pistache.',
+      // amount: '480ml',
+      price: 17,
+      image: 'http://localhost:5173/assets/images/pao/cannoli-cream.webp',
+      label: ['Doce'],
+    },
+    {
+      id: '2192e37c-7ce8-4297-80b4-4d8f15db4719',
+      name: 'Dirty Soft Bun',
+      description:
+        'Massa fofinha com laranja cristalizada, recheada com ganache de chocolate, finalizado com cacau em pó e crispearl de chocolate callebaut.',
+      // amount: '480ml',
+      price: 16,
+      image: 'http://localhost:5173/assets/images/pao/dirty-soft-bun.webp',
+      label: ['Doce'],
+    },
+    {
+      id: '6e7b1f09-a98d-491f-8eb5-d9e213467583',
+      name: 'Magic Stick Wi',
+      description:
+        'Massa fofinha e artesanal à base de matcha, recheado com o mais leve e puro creme de baunilha, finalizado com a dupla de frutas perfeita: kiwi e pêssego amarelo.',
+      // amount: '480ml',
+      price: 16,
+      image: 'http://localhost:5173/assets/images/pao/magic-stick-wi.webp',
+      label: ['Doce'],
+    },
+    {
+      id: 'c84beec2-0ee0-4790-ad5e-7cf6128bd5a6',
+      name: 'Magic Stick Morango',
+      description:
+        'Massa de pitaya vermelha recheada com creme de frutas vermelhas e morangos frescos.',
+      // amount: '480ml',
+      price: 16,
+      image: 'http://localhost:5173/assets/images/pao/magic-stick-morango.webp',
+      label: ['Doce'],
+    },
+    {
+      id: '74987b87-abc8-4b8a-9c2c-4b728a0be259',
+      name: 'Magic Stick Oreo',
+      description: 'Massa de Oreo com recheio de chocolate e biscoitos oreo.',
+      // amount: '480ml',
+      price: 16,
+      image: 'http://localhost:5173/assets/images/pao/magic-stick-oreo.webp',
+      label: ['Doce'],
+    },
+    {
+      id: 'debb95a1-acc5-43c9-a36c-6776d0fc5931',
+      name: 'Soft Bun Alho',
+      description:
+        'Pão de fermentação natural, com molho agridoce, recheado com creme cheese, alho, parmesão ralado e salsinha.',
+      // amount: '480ml',
+      price: 16,
+      image: 'http://localhost:5173/assets/images/pao/soft-bun-alho.webp',
+      label: ['Salgado'],
+    },
+    {
+      id: 'b6b06e8c-a6fd-4e63-b14e-38b0cfdf18b6',
+      name: 'Soft Bun Bacon e Rúcula',
+      description:
+        'Pão de fermentação natural de parmesão, muçarela, bacon, rúcula, maionese e ketchup.',
+      // amount: '480ml',
+      price: 17,
+      image:
+        'http://localhost:5173/assets/images/pao/soft-bun-bacon-rucula.webp',
+      label: ['Salgado'],
+    },
+    {
+      id: '1c6be277-926f-4479-b5dd-6d1f6554112f',
+      name: 'Soft Bun Salsicha',
+      description:
+        'Pão de fermentação natural, com salsicha (carne bovina e suína), creme de queijo, coberto com mussarela, finalizado com milho e salsinha.',
+      // amount: '480ml',
+      price: 18,
+      image: 'http://localhost:5173/assets/images/pao/soft-bun-salsicha.webp',
+      label: ['Salgado'],
+    },
+    {
+      id: 'e9c0d3fc-d748-4ee5-8180-9a02578a84b5',
+      name: 'Sanduíche de Bacon',
+      description:
+        'Pão de forma com bacon, queijo mussarela, tomate, ovo e maionese.',
+      // amount: '480ml',
+      price: 11,
+      image: 'http://localhost:5173/assets/images/pao/sanduiche-bacon.webp',
+      label: ['Salgado'],
+    },
+    {
+      id: '4529181d-0dc8-4f0c-8391-e5d7788c4849',
+      name: 'Pão de Forma Parmesão',
+      description:
+        'Massa fofinha amanteigada, levemente adocicado com parmesão.',
+      // amount: '480ml',
+      price: 30,
+      image: 'http://localhost:5173/assets/images/pao/pao_forma-parmesao.webp',
+      label: ['Salgado'],
+    },
+    {
+      id: 'a4f4d10e-7199-4ce1-98d6-9b58a9b0fd65',
+      name: 'Pão de Forma Coco',
+      description:
+        'Massa fofinha amanteigada, com recheio especial de coco cremoso.',
+      // amount: '480ml',
+      price: 30,
+      image: 'http://localhost:5173/assets/images/pao/pao_forma-coco.webp',
+      label: ['Doce'],
+    },
+  ],
 }
 
 export default PRODUCT_DATA

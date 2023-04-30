@@ -8,10 +8,10 @@ import { ShoppingCart } from 'phosphor-react'
 type ProductCardProps = {
   name: string
   description: string
-  amount: string
+  amount?: string
   price: number
   image: string
-  label: string[]
+  label?: string[]
 }
 
 export function ProductCard({
@@ -48,14 +48,15 @@ export function ProductCard({
           <img className="mx-auto -mt-3" src={image} alt="" />
         </div>
         <div className="flex flex-wrap justify-center gap-2">
-          {label.map((labelText) => (
-            <p
-              key={labelText}
-              className="py-1 px-2 text-xs font-bold text-primary-700 bg-primary-100"
-            >
-              {labelText}
-            </p>
-          ))}
+          {label &&
+            label.map((labelText) => (
+              <p
+                key={labelText}
+                className="py-1 px-2 text-xs font-bold text-primary-700 bg-primary-100"
+              >
+                {labelText}
+              </p>
+            ))}
         </div>
       </header>
 

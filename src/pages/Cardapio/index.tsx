@@ -20,7 +20,7 @@ const CATEGORIES = [
   { name: 'cha', label: 'Chá', icon: <IconTeapot size={32} /> },
   { name: 'milkshake', label: 'Milk shake', icon: <IconMilkshake size={32} /> },
   { name: 'salty-cream', label: 'Salty cream', icon: <IconCup size={32} /> },
-  { name: 'salgado', label: 'Salgado', icon: <IconBaguette size={32} /> },
+  { name: 'pao', label: 'Pão', icon: <IconBaguette size={32} /> },
   { name: 'doce', label: 'Doce', icon: <IconLollipop size={32} /> },
   { name: 'agua', label: 'Água', icon: <IconBottle size={32} /> },
 ]
@@ -156,12 +156,24 @@ export function Cardapio() {
         <div className="grid gap-4">
           <h2
             className="p-1 text-xl font-bold text-primary-700 border-b border-b-primary-700 sm:text-2xl"
-            id="salgado"
+            id="pao"
           >
-            Salgado
+            Pães
           </h2>
-          <div>
-            <p>Product</p>
+          <div className="grid gap-4 grid-cols-product-list">
+            {PRODUCT_DATA.pao.map(
+              ({ id, name, description, image, price, label }) => (
+                <ProductCard
+                  name={name}
+                  description={description}
+                  image={image}
+                  // amount={amount}
+                  price={price}
+                  label={label}
+                  key={id}
+                />
+              ),
+            )}
           </div>
         </div>
       </section>
