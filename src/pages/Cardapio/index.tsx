@@ -186,8 +186,18 @@ export function Cardapio() {
           >
             Doce
           </h2>
-          <div>
-            <p>Product</p>
+          <div className="grid gap-4 grid-cols-product-list">
+            {PRODUCT_DATA.doce.map(
+              ({ id, name, description, image, price }) => (
+                <ProductCard
+                  name={name}
+                  description={description}
+                  image={image}
+                  price={price}
+                  key={id}
+                />
+              ),
+            )}
           </div>
         </div>
       </section>

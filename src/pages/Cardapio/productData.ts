@@ -710,6 +710,89 @@ const PRODUCT_DATA = {
       label: ['Doce'],
     },
   ],
+  doce: [
+    {
+      id: '396145a6-435f-462c-8a83-bbf7bc7c290d',
+      name: 'Rabbit',
+      description:
+        'Mousse de cream cheese, recheio de baunilha com ganache de pistache e bolo de chocolate.',
+      // amount: '480ml',
+      price: 22,
+      image: 'http://localhost:5173/assets/images/doce/rabbit.webp',
+      // label: ['Doce'],
+    },
+    {
+      id: '4d06364c-a6a5-474b-8121-04b8d1883e44',
+      name: 'Big Pistachio',
+      description:
+        'Pistache em todos os detalhes: mousse, recheio cremoso, recheio crocante e biscoito amanteigado, além de um glaciado com chocolate branco.',
+      // amount: '480ml',
+      price: 26,
+      image: 'http://localhost:5173/assets/images/doce/big-pistachio.webp',
+      // label: ['Doce'],
+    },
+    {
+      id: 'a2f48fc3-c5af-45af-9c01-f1713bc3f380',
+      name: 'Yellow Bee',
+      description:
+        'Mousse de chocolate branco e baunilha com recheio de ganache de chocolate belga ao leite e cremoso de banana, finalizada com base crocante de chocolate com avelã.',
+      // amount: '480ml',
+      price: 23,
+      image: 'http://localhost:5173/assets/images/doce/yellow-bee.webp',
+      // label: ['Doce'],
+    },
+    {
+      id: 'e8005713-4929-45c6-a0ad-4ba1f57ee9a6',
+      name: 'Violet Et Blanc',
+      description:
+        'Mousse cremosa de chocolate 54%, com ganache de chocolate e toque de cointreau, crocante de avelã e bolo de chocolate.',
+      // amount: '480ml',
+      price: 22,
+      image: 'http://localhost:5173/assets/images/doce/violet-et-blanc.webp',
+      // label: ['Doce'],
+    },
+    {
+      id: '237fa059-c7b9-41d0-81f5-6a2180c11225',
+      name: 'One Lemon',
+      description:
+        'Mousse de limão com recheio de limão, coberto de chocolate branco em uma base crocante de biscoito de amêndoas.',
+      // amount: '480ml',
+      price: 25,
+      image: 'http://localhost:5173/assets/images/doce/one-lemon.webp',
+      // label: ['Doce'],
+    },
+    {
+      id: '1e2b7035-7c99-461d-9a66-573ec450d61e',
+      name: 'Pandinha Pan',
+      description:
+        'Creme de mascarpone, com recheio de chocolate e framboesa, em uma base crocante de chocolate branco e amêndoas.',
+      // amount: '480ml',
+      price: 25,
+      image: 'http://localhost:5173/assets/images/doce/pandinha-pan.webp',
+      // label: ['Doce'],
+    },
+    {
+      id: '2cd8a27f-c710-42a3-aeae-eb466a44aced',
+      name: 'Ursinho Brown Mousse',
+      description:
+        'Mousse de chocolate ao leite, recheio levinho de chá Ceylon e crocante de crispearl de chocolate.',
+      // amount: '480ml',
+      price: 18,
+      image:
+        'http://localhost:5173/assets/images/doce/ursinho-brown-mousse.webp',
+      // label: ['Doce'],
+    },
+    {
+      id: '829eeb54-1729-4339-9747-4e08c6631e2a',
+      name: 'Entremet Coração',
+      description:
+        'Mousse de chocolate branco, com recheio de geleia de morango e bolo chiffon.',
+      // amount: '480ml',
+      price: 15,
+      image: 'http://localhost:5173/assets/images/doce/entremet-coracao.webp',
+      // label: ['Doce'],
+    },
+  ],
 }
 
 export default PRODUCT_DATA
