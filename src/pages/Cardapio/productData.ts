@@ -793,6 +793,27 @@ const PRODUCT_DATA = {
       // label: ['Doce'],
     },
   ],
+  agua: [
+    {
+      id: '829eeb54-1729-4339-9747-4e08c6631e2a',
+      name: 'Água Mineral Panna',
+      description: 'Água mineral natural sem gás.',
+      amount: '250ml',
+      price: 10,
+      image: 'http://localhost:5173/assets/images/agua/agua-mineral-panna.webp',
+      label: ['Sem gás'],
+    },
+    {
+      id: '829eeb54-1729-4339-9747-4e08c6631e2a',
+      name: 'Água Mineral S. Pellegrino',
+      description: 'Água mineral natural com gás.',
+      amount: '250ml',
+      price: 10,
+      image:
+        'http://localhost:5173/assets/images/agua/agua-mineral-s-pellegrino.webp',
+      label: ['Com gás'],
+    },
+  ],
 }
 
 export default PRODUCT_DATA
