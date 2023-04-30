@@ -108,8 +108,20 @@ export function Cardapio() {
           >
             Milk shake
           </h2>
-          <div>
-            <p>Product</p>
+          <div className="grid gap-4 grid-cols-product-list">
+            {PRODUCT_DATA.milkShake.map(
+              ({ id, name, description, image, amount, price, label }) => (
+                <ProductCard
+                  name={name}
+                  description={description}
+                  image={image}
+                  amount={amount}
+                  price={price}
+                  label={label}
+                  key={id}
+                />
+              ),
+            )}
           </div>
         </div>
       </section>

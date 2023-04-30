@@ -126,7 +126,7 @@ const PRODUCT_DATA = {
     },
     {
       id: '27194b67-643f-42c4-a96f-9308b0a85845',
-      name: 'Café Vienna',
+      name: 'Vienna',
       description:
         'Bebida gelada à base de espresso, leite, chocolate branco e chantilly.',
       amount: '360ml',
@@ -137,7 +137,7 @@ const PRODUCT_DATA = {
     },
     {
       id: '211227fc-c138-4292-80b8-88823b0fbfb4',
-      name: 'Café Tropicália',
+      name: 'Tropicália',
       description: 'Bebida gelada à base de cold brew, tônica e maracujá.',
       amount: '360ml',
       price: 20,
@@ -336,6 +336,100 @@ const PRODUCT_DATA = {
       image:
         'http://localhost:5173/assets/images/cha/milk-tea/gelado/brulee-agar-agar.webp',
       label: ['Gelado'],
+    },
+  ],
+  milkShake: [
+    {
+      id: 'ebe869d1-3fb9-41b4-9fe1-17f31200ff48',
+      name: 'Copacabana',
+      description:
+        'Shake a base de sorvete, com um delicioso creme de pistache, coberto com calda de caramelo, finalizado com pistache.',
+      amount: '480ml',
+      price: 28,
+      image:
+        'http://localhost:5173/assets/images/milk-shake/gelado/copacabana.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: '314f5f9a-5fdc-4b87-b515-ea3b9c741733',
+      name: 'Lótus',
+      description:
+        'Shake de Lótus, com sorvete de baunilha madagascar, cobertura de chantilly e calda de caramelo, finalizada com biscoito e caramelo.',
+      amount: '480ml',
+      price: 22,
+      image: 'http://localhost:5173/assets/images/milk-shake/gelado/lotus.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: '510d4a40-c5d7-4b91-88b9-c10a825ae4be',
+      name: 'Choco Boom',
+      description:
+        'Shake de chocolate, com biscoito Oreo, Pocky, picolé com casquinha de chocolate, sorvete de baunilha e cobertura de chocolate belga.',
+      amount: '480ml',
+      price: 26,
+      image:
+        'http://localhost:5173/assets/images/milk-shake/gelado/choco-boom.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: '7affd9d3-c236-42a7-ab8b-783381129d0e',
+      name: 'Morango',
+      description:
+        'Shake de morango, Sorvete de baunilha Madagascar, Purê de morango; Chantilly e cranberry em pó.',
+      amount: '480ml',
+      price: 20,
+      image:
+        'http://localhost:5173/assets/images/milk-shake/gelado/morango.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: '98fba0bd-648e-49b4-9088-d058b1b1d978',
+      name: 'Blueberry',
+      description:
+        'Shake de blueberry, Sorvete de baunilha Madagascar, Purê de blueberry, Chantilly, Blueberry fresco e Blueberry em pó.',
+      amount: '480ml',
+      price: 22,
+      image:
+        'http://localhost:5173/assets/images/milk-shake/gelado/blueberry.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: '7218bb1f-1209-4a86-88a1-451413b0bd87',
+      name: 'Oreo',
+      description: 'Frapê de biscoito Oreo, com topping de Oreo.',
+      amount: '360ml',
+      price: 20,
+      image: 'http://localhost:5173/assets/images/milk-shake/gelado/oreo.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: 'e883aae9-009f-4165-8d59-b78c7be60a24',
+      name: 'Ovomaltine',
+      description: 'Frapê de ovomaltine com Ovomaltine crocante.',
+      amount: '360ml',
+      price: 20,
+      image:
+        'http://localhost:5173/assets/images/milk-shake/gelado/ovomaltine.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: '258ce7a7-f992-417c-b899-2b32237e5e14',
+      name: 'Oreo Hot',
+      description: 'Bebida de biscoito Oreo com topping de Oreo.',
+      amount: '480ml',
+      price: 20,
+      image: 'http://localhost:5173/assets/images/milk-shake/quente/oreo.webp',
+      label: ['Quente'],
+    },
+    {
+      id: '5eed3b38-2aeb-46e2-afa2-d6a8ce6f8936',
+      name: 'Ovomaltine Hot',
+      description: 'Bebida de Ovomaltine com Ovomaltine crocante.',
+      amount: '480ml',
+      price: 20,
+      image:
+        'http://localhost:5173/assets/images/milk-shake/quente/ovomaltine.webp',
+      label: ['Quente'],
     },
   ],
 }
