@@ -1,7 +1,26 @@
+// DEPENDENCY
+import { ChangeEvent, useState } from 'react'
+
 // STYLE
 import { ShoppingCart } from 'phosphor-react'
 
 export function ProductCard() {
+  const [quantity, setQuantity] = useState(0)
+
+  const handleInputQuantityChange = (evt: ChangeEvent<HTMLInputElement>) => {
+    setQuantity(Number(evt.target.value))
+  }
+
+  const handleDecrementQuantity = () => {
+    if (!(quantity <= 0)) {
+      setQuantity((state) => state - 1)
+    }
+  }
+
+  const handleIncrementQuantity = () => {
+    setQuantity((state) => state + 1)
+  }
+
   return (
     <article className="shadow-lg p-4 [&>_*:is(:not(:first-child))]:mt-3">
       {/* <article className="shadow-xl p-4 [&>_*:is(:not(:first-child))]:mt-2"> */}
@@ -39,16 +58,24 @@ export function ProductCard() {
 
       <footer className="flex flex-wrap gap-4 justify-between">
         <div className="flex-1 flex items-center gap-2 bg-neutral-100">
-          <button className="text-primary-400 font-bold outline-none px-2 hocus:text-primary-700 focus-visible:ring ring-primary-400">
+          <button
+            onClick={handleDecrementQuantity}
+            className="text-primary-400 font-bold outline-none px-2 hocus:text-primary-700 focus-visible:ring ring-primary-400"
+          >
             -
           </button>
           <input
-            className="w-full bg-transparent outline-none"
+            className="w-full bg-transparent outline-none text-center"
             type="text"
             pattern="[0-9]*"
             inputMode="numeric"
+            value={quantity}
+            onChange={handleInputQuantityChange}
           />
-          <button className="text-primary-400 font-bold outline-none px-2 hocus:text-primary-700 focus-visible:ring ring-primary-400">
+          <button
+            onClick={handleIncrementQuantity}
+            className="text-primary-400 font-bold outline-none px-2 hocus:text-primary-700 focus-visible:ring ring-primary-400"
+          >
             +
           </button>
         </div>
