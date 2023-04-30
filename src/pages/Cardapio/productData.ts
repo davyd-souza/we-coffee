@@ -432,6 +432,81 @@ const PRODUCT_DATA = {
       label: ['Quente'],
     },
   ],
+  saltyCream: [
+    {
+      id: 'd73912ad-3792-440e-b65b-b912d8fac171',
+      name: 'Caqui',
+      description:
+        'Smoothie de caqui a base de chá de jasmin, com pedaços de caqui frescos e salty cream.',
+      amount: '480ml',
+      price: 22,
+      image: 'http://localhost:5173/assets/images/salty-cream/caqui.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: '746e9d24-9d90-42b5-b70f-8e9de0cb5a48',
+      name: 'Morango',
+      description:
+        'Smoothie de morango, pedaços de morangos frescos, a base de chá de jasmin e salty cream.',
+      amount: '480ml',
+      price: 18,
+      image: 'http://localhost:5173/assets/images/salty-cream/morango.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: 'ee1565e4-2776-4a9a-a358-98d044907272',
+      name: 'Manga',
+      description:
+        'Smoothie de manga a base de chá de Jasmin, com purê de manga fresca e salty cream',
+      amount: '480ml',
+      price: 18,
+      image: 'http://localhost:5173/assets/images/salty-cream/manga.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: '0082a4a6-45c2-4d02-bc4a-77bba3a7e0dc',
+      name: 'Manga Coco',
+      description:
+        'Smoothie de manga e leite de coco, bobo agar agar e salty cream.',
+      amount: '480ml',
+      price: 19,
+      image: 'http://localhost:5173/assets/images/salty-cream/manga-coco.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: '883dd699-97ed-4f24-8513-1f8872732ecf',
+      name: 'Blueberry Duo',
+      description:
+        'Smoothie de blueberry e morangos, a base de chá de jasmin e coberto com salty cream.',
+      amount: '480ml',
+      price: 19,
+      image:
+        'http://localhost:5173/assets/images/salty-cream/blueberry-duo.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: '5d9fce23-c3e6-4f7c-b707-ae8f984ac83d',
+      name: 'Framboesa Duo',
+      description:
+        'Smoothie de framboesa e morango a base de chá de jasmin, com pure de framboesa e morango e cobertura de salty cream.',
+      amount: '480ml',
+      price: 19,
+      image:
+        'http://localhost:5173/assets/images/salty-cream/framboesa-duo.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: 'a2146fb4-d040-49cc-85b1-4a7d5674c655',
+      name: 'Frutas Vermelhas',
+      description:
+        'Smoothie de frutas vermelhas, morango, blueberry, amora, framboesa a base de chá de Jasmin e cobertura de salty cream.',
+      amount: '480ml',
+      price: 19,
+      image:
+        'http://localhost:5173/assets/images/salty-cream/frutas-vermelhas.webp',
+      label: ['Gelado'],
+    },
+  ],
 }
 
 export default PRODUCT_DATA
