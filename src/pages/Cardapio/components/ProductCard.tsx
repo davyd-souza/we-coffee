@@ -4,7 +4,24 @@ import { ChangeEvent, useState } from 'react'
 // STYLE
 import { ShoppingCart } from 'phosphor-react'
 
-export function ProductCard() {
+// TYPE
+type ProductCardProps = {
+  name: string
+  description: string
+  amount: string
+  price: number
+  image: string
+  label: string[]
+}
+
+export function ProductCard({
+  name,
+  description,
+  amount,
+  price,
+  image,
+  label,
+}: ProductCardProps) {
   const [quantity, setQuantity] = useState(0)
 
   const handleInputQuantityChange = (evt: ChangeEvent<HTMLInputElement>) => {
@@ -23,37 +40,33 @@ export function ProductCard() {
 
   return (
     <article className="shadow-lg p-4 [&>_*:is(:not(:first-child))]:mt-3">
-      {/* <article className="shadow-xl p-4 [&>_*:is(:not(:first-child))]:mt-2"> */}
       <header className="isolate">
         <div className="grid">
           <h3 className="text-center text-xl font-bold text-primary-700 z-10">
-            Nome
+            {name}
           </h3>
-          <img
-            className="mx-auto -mt-6"
-            src="http://localhost:5173/assets/images/cafe/quente/mocha.webp"
-            alt="cup of espresso"
-          />
+          <img className="mx-auto -mt-6" src={image} alt="" />
         </div>
         <div className="flex flex-wrap justify-center gap-2">
-          <p className="py-1 px-2 text-xs font-bold text-primary-700 bg-primary-100">
-            Label 1
-          </p>
-          <p className="py-1 px-2 text-xs font-bold text-primary-700 bg-primary-100">
-            Label 2
-          </p>
+          {label.map((labelText) => (
+            <p
+              key={labelText}
+              className="py-1 px-2 text-xs font-bold text-primary-700 bg-primary-100"
+            >
+              {labelText}
+            </p>
+          ))}
         </div>
       </header>
 
-      <p className="text-primary-700 text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing
-      </p>
+      <p className="text-primary-700 text-center text-sm">{description}</p>
 
       <div className="flex gap-2 items-center justify-between">
         <em className="text-xl font-bold not-italic text-primary-700">
-          <span className="text-xs font-normal">R$</span> 9,90
+          <span className="text-xs font-normal">R$</span>{' '}
+          {price.toLocaleString('pt-br', { minimumFractionDigits: 2 })}
         </em>
-        <p className="text-neutral-600 text-sm">30ml</p>
+        <p className="text-neutral-600 text-sm">{amount}</p>
       </div>
 
       <footer className="flex flex-wrap gap-4 justify-between">
