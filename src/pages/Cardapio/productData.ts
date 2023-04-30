@@ -212,6 +212,132 @@ const PRODUCT_DATA = {
       label: ['Vegano', 'Leite de Aveia', 'Gelado'],
     },
   ],
+  cha: [
+    {
+      id: '988018bc-7f20-4f4f-9593-9e358cf2ff2f',
+      name: 'Jasmin',
+      description: 'Chá de Jasmin à base de água',
+      amount: '480ml',
+      price: 9,
+      image: 'http://localhost:5173/assets/images/cha/quente/jasmin.webp',
+      label: ['Quente'],
+    },
+    {
+      id: '86ef4c3b-7133-4d49-adae-1649e9604276',
+      name: 'Fruit Tea Mix',
+      description:
+        'Chá verde com morango, manga, pitaya, kiwi, limão, maracujá e blueberry.',
+      amount: '480ml',
+      price: 18,
+      image: 'http://localhost:5173/assets/images/cha/frui-tea/gelado/mix.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: '71303113-5fc9-46f3-91a9-ebc3114f789d',
+      name: 'Fruit Tea Limão',
+      description: 'Chá de limão Tahiti.',
+      amount: '480ml',
+      price: 12,
+      image:
+        'http://localhost:5173/assets/images/cha/frui-tea/gelado/limao.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: 'e7b241ee-d174-48b2-b3ba-b0a5ce005d77',
+      name: 'Fruit Tea Maracujá',
+      description: 'Chá verde com maracujá.',
+      amount: '480ml',
+      price: 14,
+      image:
+        'http://localhost:5173/assets/images/cha/frui-tea/gelado/maracuja.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: 'e30ad266-498a-42b2-8538-b40ca389f9bd',
+      name: 'Milk Tea Tradicional',
+      description: 'Chá preto, leite e bobo.',
+      amount: '480ml',
+      price: 19,
+      image:
+        'http://localhost:5173/assets/images/cha/milk-tea/quente/tradicional.webp',
+      label: ['Quente'],
+    },
+    {
+      id: '85cc0035-8cc5-4235-a265-73a187bc3c7d',
+      name: 'Milk Tea Agar Agar',
+      description: 'Chá preto, leite e bobo agar agar.',
+      amount: '480ml',
+      price: 20,
+      image:
+        'http://localhost:5173/assets/images/cha/milk-tea/quente/agar-agar.webp',
+      label: ['Quente'],
+    },
+    {
+      id: '7cf850ed-a69e-4a63-9725-4e587197f578',
+      name: 'Milk Tea Brûlée',
+      description:
+        'Chá preto com leite, topping de creme e açúcar caramelizada.',
+      amount: '480ml',
+      price: 20,
+      image:
+        'http://localhost:5173/assets/images/cha/milk-tea/quente/brulee.webp',
+      label: ['Quente'],
+    },
+    {
+      id: '38e7ad3c-b0f3-4ada-8733-8a3d6a60f047',
+      name: 'Milk Tea Brûlée Agar Agar',
+      description:
+        'Chá preto com leite, topping de creme, açúcar caramelizada e bobo agar agar.',
+      amount: '480ml',
+      price: 21,
+      image:
+        'http://localhost:5173/assets/images/cha/milk-tea/quente/brulee-agar-agar.webp',
+      label: ['Quente'],
+    },
+    {
+      id: '57a513f5-59e8-4a5a-b9df-504db20476ce',
+      name: 'Milk Tea Tradicional',
+      description: 'Chá preto, leite e bobo.',
+      amount: '360ml',
+      price: 19,
+      image:
+        'http://localhost:5173/assets/images/cha/milk-tea/gelado/tradicional.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: 'b2883be7-97ef-4f83-bf9b-71b7d07e32e7',
+      name: 'Milk Tea Agar Agar',
+      description:
+        'Chá preto com leite, bobo agar agar, topping de creme e açúcar caramelizada.',
+      amount: '360ml',
+      price: 20,
+      image:
+        'http://localhost:5173/assets/images/cha/milk-tea/gelado/agar-agar.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: 'c0c911c1-678c-45d1-918a-13b2dd2eb7d9',
+      name: 'Milk Tea Brûlée',
+      description:
+        'Chá preto com leite, topping de creme e açúcar caramelizada.',
+      amount: '360ml',
+      price: 20,
+      image:
+        'http://localhost:5173/assets/images/cha/milk-tea/gelado/brulee.webp',
+      label: ['Gelado'],
+    },
+    {
+      id: 'd8c189f0-d8b7-469a-a9b2-bb360af50dea',
+      name: 'Milk Tea Brûlée Agar Agar',
+      description:
+        'Chá preto com leite, bobo agar agar, topping de creme e açúcar caramelizada.',
+      amount: '360ml',
+      price: 21,
+      image:
+        'http://localhost:5173/assets/images/cha/milk-tea/gelado/brulee-agar-agar.webp',
+      label: ['Gelado'],
+    },
+  ],
 }
 
 export default PRODUCT_DATA
