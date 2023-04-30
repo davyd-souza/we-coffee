@@ -33,7 +33,7 @@ export default {
         },
       },
       gridTemplateColumns: {
-        'product-list': 'repeat(auto-fill, minmax(15rem, 1fr))',
+        'product-list': 'repeat(auto-fill, minmax(20rem, 1fr))',
       },
     },
   },
