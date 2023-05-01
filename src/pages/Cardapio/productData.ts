@@ -795,7 +795,7 @@ const PRODUCT_DATA = {
   ],
   agua: [
     {
-      id: '829eeb54-1729-4339-9747-4e08c6631e2a',
+      id: 'f39629fe-1420-4625-b334-7954864ce947',
       name: 'Água Mineral Panna',
       description: 'Água mineral natural sem gás.',
       amount: '250ml',
@@ -804,7 +804,7 @@ const PRODUCT_DATA = {
       label: ['Sem gás'],
     },
     {
-      id: '829eeb54-1729-4339-9747-4e08c6631e2a',
+      id: '31d8d468-3b4c-427f-9df5-fbfc23bdee72',
       name: 'Água Mineral S. Pellegrino',
       description: 'Água mineral natural com gás.',
       amount: '250ml',
