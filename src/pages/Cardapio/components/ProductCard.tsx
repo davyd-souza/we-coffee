@@ -1,11 +1,15 @@
 // DEPENDENCY
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useContext, useState } from 'react'
+
+// CONTEXT
+import { CartContext } from 'contexts/CartContext'
 
 // STYLE
 import { ShoppingCart } from 'phosphor-react'
 
 // TYPE
 type ProductCardProps = {
+  id: string
   name: string
   description: string
   amount?: string
@@ -15,6 +19,7 @@ type ProductCardProps = {
 }
 
 export function ProductCard({
+  id,
   name,
   description,
   amount,
@@ -22,10 +27,20 @@ export function ProductCard({
   image,
   label,
 }: ProductCardProps) {
+  const { addItemToCart } = useContext(CartContext)
   const [quantity, setQuantity] = useState(0)
 
   const handleInputQuantityChange = (evt: ChangeEvent<HTMLInputElement>) => {
     setQuantity(Number(evt.target.value))
+  }
+
+  const handleAddItemToCart = () => {
+    const cartItem = {
+      id,
+      quantity,
+    }
+
+    addItemToCart(cartItem)
   }
 
   const handleDecrementQuantity = () => {
@@ -93,7 +108,10 @@ export function ProductCard({
             +
           </button>
         </div>
-        <button className="flex-1 py-1 px-2 flex items-center justify-center gap-2 bg-primary-700 text-white font-bold outline-none hocus:bg-primary-400 focus-visible:ring ring-primary-400 ring-offset-2 ring-offset-white">
+        <button
+          onClick={handleAddItemToCart}
+          className="flex-1 py-1 px-2 flex items-center justify-center gap-2 bg-primary-700 text-white font-bold outline-none hocus:bg-primary-400 focus-visible:ring ring-primary-400 ring-offset-2 ring-offset-white"
+        >
           <ShoppingCart size={24} weight="fill" />
           Cart
         </button>

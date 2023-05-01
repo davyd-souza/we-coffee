@@ -60,6 +60,7 @@ export function Cardapio() {
             {PRODUCT_DATA.cafe.map(
               ({ id, name, description, image, amount, price, label }) => (
                 <ProductCard
+                  id={id}
                   name={name}
                   description={description}
                   image={image}
@@ -86,6 +87,7 @@ export function Cardapio() {
             {PRODUCT_DATA.cha.map(
               ({ id, name, description, image, amount, price, label }) => (
                 <ProductCard
+                  id={id}
                   name={name}
                   description={description}
                   image={image}
@@ -112,6 +114,7 @@ export function Cardapio() {
             {PRODUCT_DATA.milkShake.map(
               ({ id, name, description, image, amount, price, label }) => (
                 <ProductCard
+                  id={id}
                   name={name}
                   description={description}
                   image={image}
@@ -138,6 +141,7 @@ export function Cardapio() {
             {PRODUCT_DATA.saltyCream.map(
               ({ id, name, description, image, amount, price, label }) => (
                 <ProductCard
+                  id={id}
                   name={name}
                   description={description}
                   image={image}
@@ -164,6 +168,7 @@ export function Cardapio() {
             {PRODUCT_DATA.pao.map(
               ({ id, name, description, image, price, label }) => (
                 <ProductCard
+                  id={id}
                   name={name}
                   description={description}
                   image={image}
@@ -190,6 +195,7 @@ export function Cardapio() {
             {PRODUCT_DATA.doce.map(
               ({ id, name, description, image, price }) => (
                 <ProductCard
+                  id={id}
                   name={name}
                   description={description}
                   image={image}
@@ -214,6 +220,7 @@ export function Cardapio() {
             {PRODUCT_DATA.agua.map(
               ({ id, name, description, image, price }) => (
                 <ProductCard
+                  id={id}
                   name={name}
                   description={description}
                   image={image}
