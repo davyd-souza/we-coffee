@@ -1,3 +1,6 @@
+// DEPENDENCY
+import { Link } from 'react-router-dom'
+
 // ASSET
 import drinkBanner from '@assets/drink-banner.png'
 import sweetBanner from '@assets/sweet-banner.png'
@@ -36,12 +39,12 @@ export function ProductsSection() {
             Conheça e experimente produtos exclusivos, desenvolvidos
             especialmente para você.
           </p>
-          <a
+          <Link
             className="py-2 px-4 rounded-full text-white bg-primary-700 hocus:bg-primary-600 transition-colors outline-none focus-visible:ring ring-primary-600 ring-offset-2 ring-offset-primary-100"
-            href="#"
+            to="/cardapio"
           >
             Conheça nosso cardápio
-          </a>
+          </Link>
         </article>
       </div>
     </section>
