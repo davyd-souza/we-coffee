@@ -1,11 +1,19 @@
+// DEPENDENCY
+import { useContext } from 'react'
+
 // COMPONENT
 import * as ToggleGroup from '@radix-ui/react-toggle-group'
 import { CartProductCard } from './components/CartProductCard'
+
+// CONTEXT
+import { CartContext } from 'contexts/CartContext'
 
 // ASSET
 import { Bank, CreditCard, CurrencyDollar, MapPin, Money } from 'phosphor-react'
 
 export function Cart() {
+  const { cart } = useContext(CartContext)
+
   return (
     <main className="max-w-6xl mx-auto px-6 py-8 grid lg:grid-cols-2 gap-8">
       <form className="space-y-6" id="order">
@@ -129,7 +137,16 @@ export function Cart() {
 
         <div className="grid gap-8">
           <div className="space-y-8">
-            <CartProductCard />
+            {cart &&
+              cart.map(({ id, name, quantity, image, price }) => (
+                <CartProductCard
+                  key={id}
+                  name={name}
+                  image={image}
+                  price={price}
+                  quantity={quantity}
+                />
+              ))}
           </div>
 
           <div className="space-y-2">

@@ -1,19 +1,35 @@
 // ASSET
 import { Trash } from 'phosphor-react'
 
-export function CartProductCard() {
+// UTIL
+import { priceFormatter } from '@utils/formatter'
+
+// TYPE
+type CartProductCardProps = {
+  name: string
+  image: string
+  price: number
+  quantity: number
+}
+
+export function CartProductCard({
+  name,
+  image,
+  price,
+  quantity,
+}: CartProductCardProps) {
   return (
     <article className="grid grid-cols-[80px_1fr_min-content] gap-4 max-w-2xl">
       <img
         className="place-self-center"
         width="80"
         height="80"
-        src="http://localhost:5173/assets/images/cafe/quente/americano.webp"
+        src={image}
         alt=""
       />
 
       <section className="flex flex-col justify-between gap-2">
-        <p>Café Americano</p>
+        <p>{name}</p>
 
         <div className="grid sm:grid-cols-2 gap-2">
           <div className="flex items-center gap-2 bg-neutral-100">
@@ -28,6 +44,7 @@ export function CartProductCard() {
               type="text"
               pattern="[0-9]*"
               inputMode="numeric"
+              defaultValue={quantity}
               // value={quantity}
               // onChange={handleInputQuantityChange}
             />
@@ -49,7 +66,9 @@ export function CartProductCard() {
         </div>
       </section>
 
-      <p className="font-bold text-primary-700">R$9,90</p>
+      <p className="font-bold text-primary-700">
+        {priceFormatter.format(price)}
+      </p>
     </article>
   )
 }

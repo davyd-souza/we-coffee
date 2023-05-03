@@ -37,6 +37,9 @@ export function ProductCard({
   const handleAddItemToCart = () => {
     const cartItem = {
       id,
+      name,
+      price,
+      image,
       quantity,
     }
 

@@ -4,6 +4,9 @@ import { ReactNode, createContext, useState } from 'react'
 // TYPE
 type CartType = {
   id: string
+  name: string
+  price: number
+  image: string
   quantity: number
 }
 
