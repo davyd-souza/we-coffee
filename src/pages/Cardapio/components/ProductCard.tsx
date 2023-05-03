@@ -63,7 +63,13 @@ export function ProductCard({
           <h3 className="text-center text-xl font-bold text-primary-700 z-10">
             {name}
           </h3>
-          <img className="mx-auto -mt-1" src={image} alt="" />
+          <img
+            width="200"
+            height="200"
+            className="mx-auto -mt-1"
+            src={image}
+            alt=""
+          />
         </div>
         <div className="flex flex-wrap justify-center gap-2">
           {label &&
