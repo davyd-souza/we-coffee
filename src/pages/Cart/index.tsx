@@ -4,6 +4,7 @@ import { useContext } from 'react'
 // COMPONENT
 import * as ToggleGroup from '@radix-ui/react-toggle-group'
 import { CartProductCard } from './components/CartProductCard'
+import { Input } from '@components/Input'
 
 // CONTEXT
 import { CartContext } from 'contexts/CartContext'
@@ -31,35 +32,17 @@ export function Cart() {
           </header>
 
           <div className="space-y-2">
-            <input
-              className="min-w-full p-2 border-2 border-primary-600 outline-none placeholder:text-neutral-400 [&:not(:disabled)]:hocus:border-primary-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-              type="text"
-              placeholder="CEP"
-              required
-            />
-            <input
-              className="min-w-full p-2 border-2 border-primary-600 outline-none placeholder:text-neutral-400 [&:not(:disabled)]:hocus:border-primary-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-              type="text"
-              placeholder="Rua"
-              required
-            />
+            <Input type="text" placeholder="CEP" required />
+            <Input type="text" placeholder="Rua" required />
 
             <div className="grid sm:grid-cols-[20ch_1fr] gap-2">
-              <input
-                className="w-full p-2 border-2 border-primary-600 outline-none placeholder:text-neutral-400 [&:not(:disabled)]:hocus:border-primary-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-                type="text"
-                placeholder="Número"
-                required
-              />
-              <div className="relative group/card">
-                <input
-                  className="w-full p-2 border-2 border-primary-600 outline-none placeholder:text-neutral-400 [&:not(:disabled)]:hocus:border-primary-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all before:content-['Opcional'] peer/input"
-                  type="text"
-                  placeholder="Complemento"
-                />
+              <Input type="text" placeholder="Número" required />
+
+              <div className="relative group/input-group">
+                <Input type="text" placeholder="Complemento" required />
                 <span
                   aria-hidden
-                  className="group-focus-within/card:invisible peer-[&:not(:placeholder-shown)]/input:invisible text-neutral-400 text-xs absolute right-2 top-1/2 -translate-y-1/2"
+                  className="group-focus-within/input-group:invisible peer-[&:not(:placeholder-shown)]/input:invisible text-neutral-400 text-xs absolute right-2 top-1/2 -translate-y-1/2"
                 >
                   Opcional
                 </span>
@@ -67,24 +50,9 @@ export function Cart() {
             </div>
 
             <div className="grid sm:grid-cols-[20ch_1fr_5ch] gap-2">
-              <input
-                className="w-full p-2 border-2 border-primary-600 outline-none placeholder:text-neutral-400 [&:not(:disabled)]:hocus:border-primary-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-                type="text"
-                placeholder="Bairro"
-                required
-              />
-              <input
-                className="w-full p-2 border-2 border-primary-600 outline-none placeholder:text-neutral-400 [&:not(:disabled)]:hocus:border-primary-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-                type="text"
-                placeholder="Cidade"
-                required
-              />
-              <input
-                className="w-full p-2 border-2 border-primary-600 outline-none placeholder:text-neutral-400 [&:not(:disabled)]:hocus:border-primary-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-                type="text"
-                placeholder="UF"
-                required
-              />
+              <Input type="text" placeholder="Bairro" required />
+              <Input type="text" placeholder="Cidade" required />
+              <Input type="text" placeholder="UF" required />
             </div>
           </div>
         </section>
