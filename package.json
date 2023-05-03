@@ -13,6 +13,7 @@
     "@radix-ui/react-toggle-group": "^1.0.3",
     "@tabler/icons-react": "^2.16.0",
     "@vanilla-extract/css": "^1.11.0",
+    "axios": "^1.4.0",
     "clsx": "^1.2.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
