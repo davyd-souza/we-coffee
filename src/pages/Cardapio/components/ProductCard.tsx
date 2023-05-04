@@ -27,14 +27,14 @@ export function ProductCard({
   image,
   label,
 }: ProductCardProps) {
-  const { addItemToCart } = useContext(CartContext)
+  const { addCartItem } = useContext(CartContext)
   const [quantity, setQuantity] = useState(0)
 
   const handleInputQuantityChange = (evt: ChangeEvent<HTMLInputElement>) => {
     setQuantity(Number(evt.target.value))
   }
 
-  const handleAddItemToCart = () => {
+  const handleAddCartItem = () => {
     const cartItem = {
       id,
       name,
@@ -43,7 +43,7 @@ export function ProductCard({
       quantity,
     }
 
-    addItemToCart(cartItem)
+    addCartItem(cartItem)
   }
 
   const handleDecrementQuantity = () => {
@@ -118,7 +118,7 @@ export function ProductCard({
           </button>
         </div>
         <button
-          onClick={handleAddItemToCart}
+          onClick={handleAddCartItem}
           className="flex-1 py-1 px-2 flex items-center justify-center gap-2 bg-primary-700 text-white font-bold outline-none hocus:bg-primary-400 focus-visible:ring ring-primary-400 ring-offset-2 ring-offset-white"
         >
           <ShoppingCart size={24} weight="fill" />

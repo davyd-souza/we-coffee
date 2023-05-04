@@ -1,5 +1,5 @@
 // DEPENDENCY
-import { useContext } from 'react'
+import { ChangeEvent, useContext } from 'react'
 
 // CONTEXT
 import { CartContext } from 'contexts/CartContext'
@@ -28,28 +28,27 @@ export function CartProductCard({
 }: CartProductCardProps) {
   const {
     removeCartItem,
-    incrementQuantityCartItem,
-    decrementQuantityCartItem,
-    inputQuantityChangeCartItem,
+    incrementCartItemQuantity,
+    decrementCartItemQuantity,
+    changeCartItemInputQuantity,
   } = useContext(CartContext)
 
-  const handleRemoveCartItem = (cartItemId: string) => {
-    removeCartItem(cartItemId)
+  const handleRemoveCartItem = () => {
+    removeCartItem(id)
   }
 
-  const handleIncrementQuantityCartItem = (cartItemId: string) => {
-    incrementQuantityCartItem(cartItemId)
+  const handleIncrementCartItemQuantity = () => {
+    incrementCartItemQuantity(id)
   }
 
-  const handleDecrementQuantityCartItem = (cartItemId: string) => {
-    decrementQuantityCartItem(cartItemId)
+  const handleDecrementCartItemQuantity = () => {
+    decrementCartItemQuantity(id)
   }
 
-  const handleInputQuantityChangeCartItem = (
-    cartItemId: string,
-    value: number,
+  const handleChangeCartItemInputQuantity = (
+    evt: ChangeEvent<HTMLInputElement>,
   ) => {
-    inputQuantityChangeCartItem(cartItemId, value)
+    changeCartItemInputQuantity(id, Number(evt.target.value))
   }
 
   return (
@@ -68,7 +67,7 @@ export function CartProductCard({
         <div className="grid sm:grid-cols-2 gap-2 max-w-xs">
           <div className="flex items-center bg-neutral-100">
             <button
-              onClick={() => handleDecrementQuantityCartItem(id)}
+              onClick={handleDecrementCartItemQuantity}
               className="text-primary-700 font-bold outline-none px-2 hocus:text-primary-400 focus-visible:ring ring-primary-400"
             >
               -
@@ -79,12 +78,10 @@ export function CartProductCard({
               pattern="[0-9]+"
               inputMode="numeric"
               value={quantity}
-              onChange={(evt) =>
-                handleInputQuantityChangeCartItem(id, Number(evt.target.value))
-              }
+              onChange={handleChangeCartItemInputQuantity}
             />
             <button
-              onClick={() => handleIncrementQuantityCartItem(id)}
+              onClick={handleIncrementCartItemQuantity}
               className="text-primary-700 font-bold outline-none px-2 hocus:text-primary-400 focus-visible:ring ring-primary-400"
             >
               +
@@ -93,7 +90,7 @@ export function CartProductCard({
 
           <button
             className="py-1 px-2 flex items-center justify-center gap-2 bg-primary-700 text-white outline-none hocus:bg-primary-400 focus-visible:ring ring-primary-400 ring-offset-2 ring-offset-white"
-            onClick={() => handleRemoveCartItem(id)}
+            onClick={handleRemoveCartItem}
           >
             <Trash size={20} weight="fill" />
             Remover
