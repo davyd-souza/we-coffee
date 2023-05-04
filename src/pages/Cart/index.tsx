@@ -16,6 +16,9 @@ import { CartContext } from 'contexts/CartContext'
 // ASSET
 import { Bank, CreditCard, CurrencyDollar, MapPin, Money } from 'phosphor-react'
 
+// UTIL
+import { priceFormatter } from '@utils/formatter'
+
 // TYPE
 const newOrderFormValidationSchema = z.object({
   zip: z.string().min(1, 'Digite um'),
@@ -49,6 +52,7 @@ export function Cart() {
     reset,
     setError,
     clearErrors,
+    getValues,
     formState: { errors, isValid },
   } = useForm<NewOrderFormData>({
     resolver: zodResolver(newOrderFormValidationSchema),
@@ -65,6 +69,12 @@ export function Cart() {
   })
 
   const isSubmitDisabled = !isValid
+  const itemsTotalPrice = cart.reduce(
+    (acc, current) => acc + current.price * current.quantity,
+    0,
+  )
+  const deliveryPrice = getValues('state') ? 3.5 : 0
+  const orderTotalPrice = itemsTotalPrice + deliveryPrice
 
   const handleCreateNewOrder = (data: NewOrderFormData) => {
     console.log('[Cart > handleCreateNewOrder > data]', data)
@@ -96,6 +106,8 @@ export function Cart() {
             message: 'O CEP digitado não foi encontrado!',
           })
         })
+    } else {
+      reset()
     }
   }
 
@@ -260,15 +272,15 @@ export function Cart() {
           <div className="space-y-2">
             <div className="flex justify-between gap-2 text-neutral-600">
               <p>Total de itens</p>
-              <p>R$ 29,70</p>
+              <p>{priceFormatter.format(itemsTotalPrice)}</p>
             </div>
             <div className="flex justify-between gap-2 text-neutral-600">
               <p>Entrega</p>
-              <p>R$ 3,50</p>
+              <p>{priceFormatter.format(deliveryPrice)}</p>
             </div>
             <div className="flex justify-between gap-2 text-neutral-800 text-xl font-bold">
               <p>Total</p>
-              <p>R$ 33,20</p>
+              <p>{priceFormatter.format(orderTotalPrice)}</p>
             </div>
           </div>
 
