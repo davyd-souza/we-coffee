@@ -26,10 +26,30 @@ export function CartProductCard({
   price,
   quantity,
 }: CartProductCardProps) {
-  const { removeCartItem } = useContext(CartContext)
+  const {
+    removeCartItem,
+    incrementQuantityCartItem,
+    decrementQuantityCartItem,
+    inputQuantityChangeCartItem,
+  } = useContext(CartContext)
 
   const handleRemoveCartItem = (cartItemId: string) => {
     removeCartItem(cartItemId)
+  }
+
+  const handleIncrementQuantityCartItem = (cartItemId: string) => {
+    incrementQuantityCartItem(cartItemId)
+  }
+
+  const handleDecrementQuantityCartItem = (cartItemId: string) => {
+    decrementQuantityCartItem(cartItemId)
+  }
+
+  const handleInputQuantityChangeCartItem = (
+    cartItemId: string,
+    value: number,
+  ) => {
+    inputQuantityChangeCartItem(cartItemId, value)
   }
 
   return (
@@ -48,7 +68,7 @@ export function CartProductCard({
         <div className="grid sm:grid-cols-2 gap-2 max-w-xs">
           <div className="flex items-center bg-neutral-100">
             <button
-              // onClick={handleDecrementQuantity}
+              onClick={() => handleDecrementQuantityCartItem(id)}
               className="text-primary-700 font-bold outline-none px-2 hocus:text-primary-400 focus-visible:ring ring-primary-400"
             >
               -
@@ -56,14 +76,15 @@ export function CartProductCard({
             <input
               className="flex-auto w-full bg-transparent outline-none text-center"
               type="text"
-              pattern="[0-9]*"
+              pattern="[0-9]+"
               inputMode="numeric"
-              defaultValue={quantity}
-              // value={quantity}
-              // onChange={handleInputQuantityChange}
+              value={quantity}
+              onChange={(evt) =>
+                handleInputQuantityChangeCartItem(id, Number(evt.target.value))
+              }
             />
             <button
-              // onClick={handleIncrementQuantity}
+              onClick={() => handleIncrementQuantityCartItem(id)}
               className="text-primary-700 font-bold outline-none px-2 hocus:text-primary-400 focus-visible:ring ring-primary-400"
             >
               +

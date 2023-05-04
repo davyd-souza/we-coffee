@@ -55,13 +55,13 @@ export function Cart() {
     formState: { isValid },
   } = newOrderForm
 
-  const isSubmitDisabled = !isValid
   const itemsTotalPrice = cart.reduce(
     (acc, current) => acc + current.price * current.quantity,
     0,
   )
   const deliveryPrice = getValues('state') ? 3.5 : 0
   const orderTotalPrice = itemsTotalPrice + deliveryPrice
+  const isSubmitDisabled = !isValid || itemsTotalPrice === 0
 
   const handleCreateNewOrder = (data: NewOrderFormData) => {
     console.log('[Cart > handleCreateNewOrder > data]', data)
