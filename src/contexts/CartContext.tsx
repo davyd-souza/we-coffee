@@ -13,6 +13,7 @@ type CartType = {
 type CartContextType = {
   cart: CartType[]
   addItemToCart: (cartItem: CartType) => void
+  removeCartItem: (cartItemId: string) => void
 }
 
 type CartContextProviderType = {
@@ -34,12 +35,17 @@ export function CartContextProvider({ children }: CartContextProviderType) {
     setCart([...newCartList, cartItem])
   }
 
+  const removeCartItem = (cartItemId: string) => {
+    const newCartList = cart.filter((item) => item.id !== cartItemId)
+    setCart(newCartList)
+  }
+
   // useEffect(() => {
   //   console.log('[CartContext > useEffect > cart]', cart)
   // }, [cart])
 
   return (
-    <CartContext.Provider value={{ cart, addItemToCart }}>
+    <CartContext.Provider value={{ cart, addItemToCart, removeCartItem }}>
       {children}
     </CartContext.Provider>
   )

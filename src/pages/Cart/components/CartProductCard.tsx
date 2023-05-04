@@ -1,3 +1,9 @@
+// DEPENDENCY
+import { useContext } from 'react'
+
+// CONTEXT
+import { CartContext } from 'contexts/CartContext'
+
 // ASSET
 import { Trash } from 'phosphor-react'
 
@@ -6,6 +12,7 @@ import { priceFormatter } from '@utils/formatter'
 
 // TYPE
 type CartProductCardProps = {
+  id: string
   name: string
   image: string
   price: number
@@ -13,13 +20,20 @@ type CartProductCardProps = {
 }
 
 export function CartProductCard({
+  id,
   name,
   image,
   price,
   quantity,
 }: CartProductCardProps) {
+  const { removeCartItem } = useContext(CartContext)
+
+  const handleRemoveCartItem = (cartItemId: string) => {
+    removeCartItem(cartItemId)
+  }
+
   return (
-    <article className="grid grid-cols-[80px_1fr_min-content] gap-4 max-w-2xl">
+    <article className="grid grid-cols-[80px_1fr_min-content] gap-4">
       <img
         className="place-self-center"
         width="80"
@@ -28,19 +42,19 @@ export function CartProductCard({
         alt=""
       />
 
-      <section className="flex flex-col justify-between gap-2">
+      <section className="flex flex-col justify-between">
         <p>{name}</p>
 
-        <div className="grid sm:grid-cols-2 gap-2">
-          <div className="flex items-center gap-2 bg-neutral-100">
+        <div className="grid sm:grid-cols-2 gap-2 max-w-xs">
+          <div className="flex items-center bg-neutral-100">
             <button
               // onClick={handleDecrementQuantity}
-              className="text-primary-400 font-bold outline-none px-2 hocus:text-primary-700 focus-visible:ring ring-primary-400"
+              className="text-primary-700 font-bold outline-none px-2 hocus:text-primary-400 focus-visible:ring ring-primary-400"
             >
               -
             </button>
             <input
-              className="w-full bg-transparent outline-none text-center"
+              className="flex-auto w-full bg-transparent outline-none text-center"
               type="text"
               pattern="[0-9]*"
               inputMode="numeric"
@@ -50,7 +64,7 @@ export function CartProductCard({
             />
             <button
               // onClick={handleIncrementQuantity}
-              className="text-primary-400 font-bold outline-none px-2 hocus:text-primary-700 focus-visible:ring ring-primary-400"
+              className="text-primary-700 font-bold outline-none px-2 hocus:text-primary-400 focus-visible:ring ring-primary-400"
             >
               +
             </button>
@@ -58,7 +72,7 @@ export function CartProductCard({
 
           <button
             className="py-1 px-2 flex items-center justify-center gap-2 bg-primary-700 text-white outline-none hocus:bg-primary-400 focus-visible:ring ring-primary-400 ring-offset-2 ring-offset-white"
-            // onClick={handleAddItemToCart}
+            onClick={() => handleRemoveCartItem(id)}
           >
             <Trash size={20} weight="fill" />
             Remover

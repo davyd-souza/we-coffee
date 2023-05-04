@@ -15,6 +15,7 @@ import { CartContext } from 'contexts/CartContext'
 
 // ASSET
 import { Bank, CreditCard, CurrencyDollar, MapPin, Money } from 'phosphor-react'
+import emptyCart from '@assets/empty-cart.svg'
 
 // UTIL
 import { priceFormatter } from '@utils/formatter'
@@ -257,16 +258,28 @@ export function Cart() {
 
         <div className="grid gap-8">
           <div className="space-y-8">
-            {cart &&
+            {cart.length > 0 ? (
               cart.map(({ id, name, quantity, image, price }) => (
                 <CartProductCard
+                  id={id}
                   key={id}
                   name={name}
                   image={image}
                   price={price}
                   quantity={quantity}
                 />
-              ))}
+              ))
+            ) : (
+              <div className="grid place-items-center gap-4 grayscale opacity-70">
+                <img
+                  width="150"
+                  height="150"
+                  src={emptyCart}
+                  alt="A person holding a empty box while the other is looking inside"
+                />
+                <p>Nenhum item encontrado no carrinho</p>
+              </div>
+            )}
           </div>
 
           <div className="space-y-2">
