@@ -32,7 +32,7 @@ const newOrderFormValidationSchema = z.object({
 export type NewOrderFormData = z.infer<typeof newOrderFormValidationSchema>
 
 export function Cart() {
-  const { cart } = useContext(CartContext)
+  const { cart, totalPriceCart } = useContext(CartContext)
 
   const newOrderForm = useForm<NewOrderFormData>({
     resolver: zodResolver(newOrderFormValidationSchema),
@@ -55,13 +55,9 @@ export function Cart() {
     formState: { isValid },
   } = newOrderForm
 
-  const itemsTotalPrice = cart.reduce(
-    (acc, current) => acc + current.price * current.quantity,
-    0,
-  )
   const deliveryPrice = getValues('state') ? 3.5 : 0
-  const orderTotalPrice = itemsTotalPrice + deliveryPrice
-  const isSubmitDisabled = !isValid || itemsTotalPrice === 0
+  const orderTotalPrice = totalPriceCart + deliveryPrice
+  const isSubmitDisabled = !isValid || totalPriceCart === 0
 
   const handleCreateNewOrder = (data: NewOrderFormData) => {
     console.log('[Cart > handleCreateNewOrder > data]', data)
@@ -117,7 +113,7 @@ export function Cart() {
           <div className="space-y-2">
             <div className="flex justify-between gap-2 text-neutral-600">
               <p>Total de itens</p>
-              <p>{priceFormatter.format(itemsTotalPrice)}</p>
+              <p>{priceFormatter.format(totalPriceCart)}</p>
             </div>
             <div className="flex justify-between gap-2 text-neutral-600">
               <p>Entrega</p>

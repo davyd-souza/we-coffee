@@ -19,6 +19,7 @@ type CartContextType = {
   incrementCartItemQuantity: (cartItemId: string) => void
   decrementCartItemQuantity: (cartItemId: string) => void
   changeCartItemInputQuantity: (cartItemId: string, value: number) => void
+  totalPriceCart: number
 }
 
 type CartContextProviderType = {
@@ -55,17 +56,18 @@ export const CartContext = createContext({} as CartContextType)
 export function CartContextProvider({ children }: CartContextProviderType) {
   const [cartState, dispatch] = useReducer(cartReducer, {
     cart: [
-      {
-        id: '1118d9c6-b426-48e2-862f-8551f6c8471f',
-        name: 'Espresso',
-        price: 6,
-        image: 'http://localhost:5173/assets/images/cafe/quente/espresso.webp',
-        quantity: 2,
-      },
+      // {
+      //   id: '1118d9c6-b426-48e2-862f-8551f6c8471f',
+      //   name: 'Espresso',
+      //   price: 6,
+      //   image: 'http://localhost:5173/assets/images/cafe/quente/espresso.webp',
+      //   quantity: 2,
+      // },
     ],
+    totalPriceCart: 0,
   })
 
-  const { cart } = cartState
+  const { cart, totalPriceCart } = cartState
 
   const addCartItem = (cartItem: CartType) => {
     if (cartItem.quantity === 0) {
@@ -104,6 +106,7 @@ export function CartContextProvider({ children }: CartContextProviderType) {
         incrementCartItemQuantity,
         decrementCartItemQuantity,
         changeCartItemInputQuantity,
+        totalPriceCart,
       }}
     >
       {children}
