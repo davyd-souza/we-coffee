@@ -1,8 +1,9 @@
 // DEPENDENCY
-import { useContext } from 'react'
+import { useContext, FocusEvent } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
+import axios from 'axios'
 
 // COMPONENT
 import * as ToggleGroup from '@radix-ui/react-toggle-group'
@@ -29,9 +30,27 @@ const newOrderFormValidationSchema = z.object({
 
 type NewOrderFormData = z.infer<typeof newOrderFormValidationSchema>
 
+type ZipCodeInfoResponse = {
+  cep: string
+  city: string
+  neighborhood: string
+  service: string
+  state: string
+  street: string
+}
+
 export function Cart() {
   const { cart } = useContext(CartContext)
-  const { control, register, handleSubmit, reset } = useForm<NewOrderFormData>({
+  const {
+    control,
+    register,
+    handleSubmit,
+    setValue,
+    reset,
+    setError,
+    clearErrors,
+    formState: { errors, isValid },
+  } = useForm<NewOrderFormData>({
     resolver: zodResolver(newOrderFormValidationSchema),
     defaultValues: {
       zip: '',
@@ -45,9 +64,39 @@ export function Cart() {
     },
   })
 
+  const isSubmitDisabled = !isValid
+
   const handleCreateNewOrder = (data: NewOrderFormData) => {
     console.log('[Cart > handleCreateNewOrder > data]', data)
     reset()
+  }
+
+  const handleFetchZipCodeInfo = (
+    evt: FocusEvent<HTMLInputElement, Element>,
+  ) => {
+    // console.log('[Cart > handleFetchZipCodeInfo > value]', evt.target.value)
+    if (evt.target.value !== '') {
+      axios
+        .get<ZipCodeInfoResponse>(
+          `https://brasilapi.com.br/api/cep/v1/${evt.target.value}`,
+        )
+        .then((res) => {
+          // console.log('[Cart > handleFetchZipCodeInfo > res]', res.data)
+          setValue('street', res.data.street)
+          setValue('neighborhood', res.data.neighborhood)
+          setValue('city', res.data.city)
+          setValue('state', res.data.state)
+          clearErrors('zip')
+        })
+        .catch((err) => {
+          console.log(err.response.data.message)
+
+          setError('zip', {
+            type: 'request error',
+            message: 'O CEP digitado não foi encontrado!',
+          })
+        })
+    }
   }
 
   return (
@@ -71,18 +120,24 @@ export function Cart() {
           </header>
 
           <div className="space-y-2">
-            <Input
-              type="text"
-              placeholder="CEP"
-              required
-              {...register('zip')}
-              autoFocus
-            />
+            <div>
+              <Input
+                type="text"
+                placeholder="CEP"
+                required
+                {...register('zip')}
+                autoFocus
+                onBlur={handleFetchZipCodeInfo}
+              />
+              {errors.zip && (
+                <p className="text-xs text-red-500">{errors.zip.message}</p>
+              )}
+            </div>
             <Input
               type="text"
               placeholder="Rua"
               required
-              // disabled
+              disabled
               {...register('street')}
             />
 
@@ -114,21 +169,21 @@ export function Cart() {
                 type="text"
                 placeholder="Bairro"
                 required
-                // disabled
+                disabled
                 {...register('neighborhood')}
               />
               <Input
                 type="text"
                 placeholder="Cidade"
                 required
-                // disabled
+                disabled
                 {...register('city')}
               />
               <Input
                 type="text"
                 placeholder="UF"
                 required
-                // disabled
+                disabled
                 {...register('state')}
               />
             </div>
@@ -218,9 +273,10 @@ export function Cart() {
           </div>
 
           <button
-            className="p-2 flex items-center justify-center gap-2 bg-primary-700 text-white font-bold outline-none hocus:bg-primary-400 focus-visible:ring ring-primary-400 ring-offset-2 ring-offset-white"
+            className="p-2 flex items-center justify-center gap-2 bg-primary-700 text-white font-bold outline-none [&:not(:disabled)]:hocus:bg-primary-400 focus-visible:ring ring-primary-400 ring-offset-2 ring-offset-white disabled:opacity-60 disabled:cursor-not-allowed"
             type="submit"
             form="order"
+            disabled={isSubmitDisabled}
           >
             Confirmar Pedido
           </button>
