@@ -18,7 +18,7 @@ export function Header({ variant = 'transparent' }: HeaderProps) {
   const { cart } = useContext(CartContext)
 
   return (
-    <header className={clsx('', { 'bg-primary-700': variant === 'primary' })}>
+    <header className={clsx({ 'bg-primary-700': variant === 'primary' })}>
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <WeCoffeeLogo className="w-12 h-12 fill-primary-400" />
@@ -49,14 +49,17 @@ export function Header({ variant = 'transparent' }: HeaderProps) {
               <MapPin size={24} weight="fill" />
               São Paulo, SP
             </span>
-            <button className="relative p-2 text-white rounded outline-none hocus:text-primary-400 focus-visible:ring ring-primary-400">
+            <NavLink
+              to="/carrinho"
+              className="relative p-2 text-white rounded outline-none hocus:text-primary-400 focus-visible:ring ring-primary-400"
+            >
               <ShoppingCart size={24} />
               {cart.length > 0 && (
-                <span className="absolute -right-0.5 -top-0.5 w-5 h-5 flex items-center justify-center text-xs text-primary-700 font-bold bg-primary-400 rounded-full">
+                <span className="absolute -right-0.5 -top-0.5 w-5 aspect-square flex items-center justify-center text-xs text-primary-700 font-bold bg-primary-100 rounded-full">
                   {cart.length}
                 </span>
               )}
-            </button>
+            </NavLink>
           </div>
         </div>
       </div>
