@@ -110,6 +110,13 @@ export function cartReducer(state: CartState, action: any) {
       })
     }
 
+    case CartActionTypes.CLEAR_CART: {
+      return produce(state, (draft) => {
+        draft.cart = []
+        draft.totalPriceCart = 0
+      })
+    }
+
     case CartActionTypes.UPDATE_ADDRESS: {
       return produce(state, (draft) => {
         draft.address = action.payload.address

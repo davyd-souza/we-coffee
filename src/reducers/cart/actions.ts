@@ -8,6 +8,7 @@ export enum CartActionTypes {
   INCREMENT_CART_ITEM_QUANTITY = 'INCREMENT_CART_ITEM_QUANTITY',
   DECREMENT_CART_ITEM_QUANTITY = 'DECREMENT_CART_ITEM_QUANTITY',
   CHANGE_CART_ITEM_INPUT_QUANTITY = 'CHANGE_CART_ITEM_INPUT_QUANTITY',
+  CLEAR_CART = 'CLEAR_CART',
   UPDATE_ADDRESS = 'UPDATE_ADDRESS',
 }
 
@@ -57,6 +58,13 @@ export function changeCartItemInputQuantityAction(
       cartItemId,
       value,
     },
+  }
+}
+
+export function clearCartAction() {
+  return {
+    type: CartActionTypes.CLEAR_CART,
+    payload: {},
   }
 }
 

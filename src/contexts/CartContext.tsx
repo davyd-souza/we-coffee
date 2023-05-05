@@ -6,6 +6,7 @@ import { AddressType, cartReducer, CartType } from 'reducers/cart/reducer'
 import {
   addCartItemAction,
   changeCartItemInputQuantityAction,
+  clearCartAction,
   decrementCartItemQuantityAction,
   incrementCartItemQuantityAction,
   removeCartItemAction,
@@ -20,6 +21,7 @@ type CartContextType = {
   incrementCartItemQuantity: (cartItemId: string) => void
   decrementCartItemQuantity: (cartItemId: string) => void
   changeCartItemInputQuantity: (cartItemId: string, value: number) => void
+  clearCart: () => void
   totalPriceCart: number
   address: AddressType
   updateAddress: (address: AddressType) => void
@@ -127,6 +129,10 @@ export function CartContextProvider({ children }: CartContextProviderType) {
     dispatch(changeCartItemInputQuantityAction(cartItemId, value))
   }
 
+  const clearCart = () => {
+    dispatch(clearCartAction())
+  }
+
   const updateAddress = (address: AddressType) => {
     dispatch(updateAddressAction(address))
   }
@@ -140,6 +146,7 @@ export function CartContextProvider({ children }: CartContextProviderType) {
         incrementCartItemQuantity,
         decrementCartItemQuantity,
         changeCartItemInputQuantity,
+        clearCart,
         totalPriceCart,
         address,
         updateAddress,
