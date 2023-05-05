@@ -32,7 +32,7 @@ const newOrderFormValidationSchema = z.object({
 export type NewOrderFormData = z.infer<typeof newOrderFormValidationSchema>
 
 export function Cart() {
-  const { cart, totalPriceCart } = useContext(CartContext)
+  const { cart, totalPriceCart, updateAddress } = useContext(CartContext)
 
   const newOrderForm = useForm<NewOrderFormData>({
     resolver: zodResolver(newOrderFormValidationSchema),
@@ -50,7 +50,6 @@ export function Cart() {
 
   const {
     handleSubmit,
-    reset,
     getValues,
     formState: { isValid },
   } = newOrderForm
@@ -60,8 +59,10 @@ export function Cart() {
   const isSubmitDisabled = !isValid || totalPriceCart === 0
 
   const handleCreateNewOrder = (data: NewOrderFormData) => {
+    const { paymentMethod, ...orderAddress } = data
+    updateAddress({ ...orderAddress })
+
     console.log('[Cart > handleCreateNewOrder > data]', data)
-    reset()
   }
 
   return (

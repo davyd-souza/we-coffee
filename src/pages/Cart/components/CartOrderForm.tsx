@@ -1,11 +1,14 @@
 // DEPENDENCY
-import { FocusEvent } from 'react'
+import { FocusEvent, useContext, useEffect } from 'react'
 import { useFormContext, Controller } from 'react-hook-form'
 import axios from 'axios'
 
 // COMPONENT
 import * as ToggleGroup from '@radix-ui/react-toggle-group'
 import { Input } from '@components/Input'
+
+// CONTEXT
+import { CartContext } from 'contexts/CartContext'
 
 // ASSET
 import { Bank, CreditCard, CurrencyDollar, MapPin, Money } from 'phosphor-react'
@@ -23,6 +26,8 @@ type ZipCodeInfoResponse = {
 }
 
 export function CartOrderForm() {
+  const { address } = useContext(CartContext)
+
   const {
     control,
     register,
@@ -36,18 +41,19 @@ export function CartOrderForm() {
   const handleFetchZipCodeInfo = (
     evt: FocusEvent<HTMLInputElement, Element>,
   ) => {
-    // console.log('[Cart > handleFetchZipCodeInfo > value]', evt.target.value)
     if (evt.target.value !== '') {
       axios
         .get<ZipCodeInfoResponse>(
           `https://brasilapi.com.br/api/cep/v1/${evt.target.value}`,
         )
         .then((res) => {
-          // console.log('[Cart > handleFetchZipCodeInfo > res]', res.data)
-          setValue('street', res.data.street)
-          setValue('neighborhood', res.data.neighborhood)
-          setValue('city', res.data.city)
-          setValue('state', res.data.state)
+          const { cep, service, ...address } = res.data
+
+          for (const key of Object.keys(address) as Array<
+            keyof typeof address
+          >) {
+            setValue(key, address[key])
+          }
           clearErrors('zip')
         })
         .catch((err) => {
@@ -62,6 +68,12 @@ export function CartOrderForm() {
       reset()
     }
   }
+
+  useEffect(() => {
+    for (const key of Object.keys(address) as Array<keyof typeof address>) {
+      setValue(key, address[key])
+    }
+  }, [address, setValue])
 
   return (
     <>
