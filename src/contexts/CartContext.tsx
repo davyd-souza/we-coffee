@@ -54,18 +54,38 @@ export const CartContext = createContext({} as CartContextType)
 // ]
 
 export function CartContextProvider({ children }: CartContextProviderType) {
-  const [cartState, dispatch] = useReducer(cartReducer, {
-    cart: [
-      // {
-      //   id: '1118d9c6-b426-48e2-862f-8551f6c8471f',
-      //   name: 'Espresso',
-      //   price: 6,
-      //   image: 'http://localhost:5173/assets/images/cafe/quente/espresso.webp',
-      //   quantity: 2,
-      // },
-    ],
-    totalPriceCart: 0,
-  })
+  const [cartState, dispatch] = useReducer(
+    cartReducer,
+    {
+      cart: [
+        // {
+        //   id: '1118d9c6-b426-48e2-862f-8551f6c8471f',
+        //   name: 'Espresso',
+        //   price: 6,
+        //   image: 'http://localhost:5173/assets/images/cafe/quente/espresso.webp',
+        //   quantity: 2,
+        // },
+      ],
+      totalPriceCart: 0,
+    },
+    (initialState) => {
+      const storedCartStateJSON = localStorage.getItem(
+        '@we-coffee:cartState-1.0.0',
+      )
+
+      if (storedCartStateJSON) {
+        return JSON.parse(storedCartStateJSON)
+      }
+
+      return initialState
+    },
+  )
+
+  useEffect(() => {
+    const stateJSON = JSON.stringify(cartState)
+
+    localStorage.setItem('@we-coffee:cartState-1.0.0', stateJSON)
+  }, [cartState])
 
   const { cart, totalPriceCart } = cartState
 
