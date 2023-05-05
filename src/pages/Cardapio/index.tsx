@@ -47,7 +47,7 @@ export function Cardapio() {
         </ul>
       </nav>
 
-      <section className="w-full max-w-6xl mx-auto px-6">
+      <section className="w-full max-w-6xl mx-auto px-6 last-of-type:pb-6">
         <div className="grid gap-4">
           <h2
             className="text-xl font-bold text-primary-700 border-b border-b-primary-700 sm:text-2xl"
@@ -75,7 +75,7 @@ export function Cardapio() {
         </div>
       </section>
 
-      <section className="w-full max-w-6xl mx-auto px-6">
+      <section className="w-full max-w-6xl mx-auto px-6 last-of-type:pb-6">
         <div className="grid gap-4">
           <h2
             className="p-1 text-xl font-bold text-primary-700 border-b border-b-primary-700 sm:text-2xl"
@@ -102,7 +102,7 @@ export function Cardapio() {
         </div>
       </section>
 
-      <section className="w-full max-w-6xl mx-auto px-6">
+      <section className="w-full max-w-6xl mx-auto px-6 last-of-type:pb-6">
         <div className="grid gap-4">
           <h2
             className="p-1 text-xl font-bold text-primary-700 border-b border-b-primary-700 sm:text-2xl"
@@ -129,7 +129,7 @@ export function Cardapio() {
         </div>
       </section>
 
-      <section className="w-full max-w-6xl mx-auto px-6">
+      <section className="w-full max-w-6xl mx-auto px-6 last-of-type:pb-6">
         <div className="grid gap-4">
           <h2
             className="p-1 text-xl font-bold text-primary-700 border-b border-b-primary-700 sm:text-2xl"
@@ -156,7 +156,7 @@ export function Cardapio() {
         </div>
       </section>
 
-      <section className="w-full max-w-6xl mx-auto px-6">
+      <section className="w-full max-w-6xl mx-auto px-6 last-of-type:pb-6">
         <div className="grid gap-4">
           <h2
             className="p-1 text-xl font-bold text-primary-700 border-b border-b-primary-700 sm:text-2xl"
@@ -183,7 +183,7 @@ export function Cardapio() {
         </div>
       </section>
 
-      <section className="w-full max-w-6xl mx-auto px-6">
+      <section className="w-full max-w-6xl mx-auto px-6 last-of-type:pb-6">
         <div className="grid gap-4">
           <h2
             className="p-1 text-xl font-bold text-primary-700 border-b border-b-primary-700 sm:text-2xl"
@@ -208,7 +208,7 @@ export function Cardapio() {
         </div>
       </section>
 
-      <section className="w-full max-w-6xl mx-auto px-6">
+      <section className="w-full max-w-6xl mx-auto px-6 last-of-type:pb-6">
         <div className="grid gap-4">
           <h2
             className="p-1 text-xl font-bold text-primary-700 border-b border-b-primary-700 sm:text-2xl"
