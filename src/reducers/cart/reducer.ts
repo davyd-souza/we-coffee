@@ -1,3 +1,6 @@
+// DEPENDENCY
+import { produce } from 'immer'
+
 // TYPE
 import { CartActionTypes } from './actions'
 export type CartType = {
@@ -16,96 +19,84 @@ type CartState = {
 export function cartReducer(state: CartState, action: any) {
   switch (action.type) {
     case CartActionTypes.ADD_CART_ITEM: {
-      const newCart = state.cart.filter(
-        (item) => item.id !== action.payload.cartItem.id,
+      const cartItemIndex = state.cart.findIndex(
+        (item) => item.id === action.payload.cartItem.id,
       )
 
-      return {
-        ...state,
-        cart: [...newCart, action.payload.cartItem],
-        totalPriceCart: [...newCart, action.payload.cartItem].reduce(
+      return produce(state, (draft) => {
+        cartItemIndex < 0
+          ? draft.cart.push(action.payload.cartItem)
+          : (draft.cart[cartItemIndex] = action.payload.cartItem)
+
+        draft.totalPriceCart = draft.cart.reduce(
           (acc, current) => acc + current.price * current.quantity,
           0,
-        ),
-      }
+        )
+      })
     }
+
     case CartActionTypes.REMOVE_CART_ITEM: {
-      const newCart = state.cart.filter(
+      const cartWithoutRemovedItem = state.cart.filter(
         (item) => item.id !== action.payload.cartItemId,
       )
 
-      return {
-        ...state,
-        cart: newCart,
-        totalPriceCart: newCart.reduce(
+      return produce(state, (draft) => {
+        draft.cart = cartWithoutRemovedItem
+        draft.totalPriceCart = draft.cart.reduce(
           (acc, current) => acc + current.price * current.quantity,
           0,
-        ),
-      }
-    }
-    case CartActionTypes.INCREMENT_CART_ITEM_QUANTITY: {
-      const newCart = state.cart.map((item) => {
-        if (item.id === action.payload.cartItemId) {
-          return {
-            ...item,
-            quantity: item.quantity + 1,
-          }
-        }
-        return item
+        )
       })
+    }
 
-      return {
-        ...state,
-        cart: newCart,
-        totalPriceCart: newCart.reduce(
+    case CartActionTypes.INCREMENT_CART_ITEM_QUANTITY: {
+      const itemCartIndex = state.cart.findIndex(
+        (item) => item.id === action.payload.cartItemId,
+      )
+
+      return produce(state, (draft) => {
+        draft.cart[itemCartIndex].quantity += 1
+        draft.totalPriceCart = draft.cart.reduce(
           (acc, current) => acc + current.price * current.quantity,
           0,
-        ),
-      }
+        )
+      })
     }
+
     case CartActionTypes.DECREMENT_CART_ITEM_QUANTITY: {
-      const newCart = state.cart.map((item) => {
-        if (item.id === action.payload.cartItemId) {
-          if (!(item.quantity <= 0)) {
-            return {
-              ...item,
-              quantity: item.quantity - 1,
-            }
-          }
-          return item
+      const itemCartIndex = state.cart.findIndex(
+        (item) => item.id === action.payload.cartItemId,
+      )
+
+      return produce(state, (draft) => {
+        if (draft.cart[itemCartIndex].quantity <= 0) {
+          return state
         }
-        return item
-      })
-      return {
-        ...state,
-        cart: newCart,
-        totalPriceCart: newCart.reduce(
+
+        draft.cart[itemCartIndex].quantity -= 1
+        draft.totalPriceCart = draft.cart.reduce(
           (acc, current) => acc + current.price * current.quantity,
           0,
-        ),
-      }
+        )
+      })
     }
+
     case CartActionTypes.CHANGE_CART_ITEM_INPUT_QUANTITY: {
-      const newCart = state.cart.map((item) => {
-        if (item.id === action.payload.cartItemId) {
-          if (!Number.isNaN(action.payload.value)) {
-            return {
-              ...item,
-              quantity: action.payload.value,
-            }
-          }
-          return item
+      const itemCartIndex = state.cart.findIndex(
+        (item) => item.id === action.payload.cartItemId,
+      )
+
+      return produce(state, (draft) => {
+        if (Number.isNaN(action.payload.value)) {
+          return state
         }
-        return item
-      })
-      return {
-        ...state,
-        cart: newCart,
-        totalPriceCart: newCart.reduce(
+
+        draft.cart[itemCartIndex].quantity = action.payload.value
+        draft.totalPriceCart = draft.cart.reduce(
           (acc, current) => acc + current.price * current.quantity,
           0,
-        ),
-      }
+        )
+      })
     }
     default:
       return state
