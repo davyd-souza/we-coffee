@@ -21,7 +21,12 @@ export function Header({ variant = 'transparent' }: HeaderProps) {
     <header className={clsx({ 'bg-primary-700': variant === 'primary' })}>
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <WeCoffeeLogo className="w-12 h-12 fill-primary-400" />
+          <NavLink
+            className="p-1 outline-none rounded focus-visible:ring ring-primary-100"
+            to="/"
+          >
+            <WeCoffeeLogo className="w-12 h-12 fill-primary-400" />
+          </NavLink>
 
           <nav aria-label="primary">
             <ul className="flex gap-2">
