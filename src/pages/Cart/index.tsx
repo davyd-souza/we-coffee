@@ -16,6 +16,7 @@ import emptyCart from '@assets/empty-cart.svg'
 
 // UTIL
 import { priceFormatter } from '@utils/formatter'
+import { useNavigate } from 'react-router-dom'
 
 // TYPE
 const newOrderFormValidationSchema = z.object({
@@ -32,7 +33,8 @@ const newOrderFormValidationSchema = z.object({
 export type NewOrderFormData = z.infer<typeof newOrderFormValidationSchema>
 
 export function Cart() {
-  const { cart, totalPriceCart, updateAddress } = useContext(CartContext)
+  const { cart, totalPriceCart, updateAddress, clearCart } =
+    useContext(CartContext)
 
   const newOrderForm = useForm<NewOrderFormData>({
     resolver: zodResolver(newOrderFormValidationSchema),
@@ -54,6 +56,8 @@ export function Cart() {
     formState: { isValid },
   } = newOrderForm
 
+  const navigate = useNavigate()
+
   const deliveryPrice = getValues('state') ? 3.5 : 0
   const orderTotalPrice = totalPriceCart + deliveryPrice
   const isSubmitDisabled = !isValid || totalPriceCart === 0
@@ -61,8 +65,28 @@ export function Cart() {
   const handleCreateNewOrder = (data: NewOrderFormData) => {
     const { paymentMethod, ...orderAddress } = data
     updateAddress({ ...orderAddress })
+    clearCart()
 
-    console.log('[Cart > handleCreateNewOrder > data]', data)
+    const order = {
+      id: crypto.randomUUID(),
+      createdAt: new Date().toISOString(),
+      totalPrice: orderTotalPrice,
+      address: { ...orderAddress },
+      paymentMethod,
+      items: cart.map((item) => ({
+        id: item.id,
+        name: item.name,
+        quantity: item.quantity,
+      })),
+    }
+
+    console.log('[Cart > handleCreateNewOrder > order]', order)
+
+    navigate('/sucesso', {
+      state: {
+        ...order,
+      },
+    })
   }
 
   return (

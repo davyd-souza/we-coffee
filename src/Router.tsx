@@ -8,6 +8,7 @@ import { DefaultLayout } from '@layouts/DefaultLayout'
 // PAGE
 import { Cardapio } from '@pages/Cardapio'
 import { Cart } from '@pages/Cart'
+import { Success } from '@pages/Success'
 
 export function Router() {
   return (
@@ -16,6 +17,7 @@ export function Router() {
       <Route path="/" element={<DefaultLayout />}>
         <Route path="/cardapio" element={<Cardapio />} />
         <Route path="/carrinho" element={<Cart />} />
+        <Route path="/sucesso" element={<Success />} />
       </Route>
     </Routes>
   )
