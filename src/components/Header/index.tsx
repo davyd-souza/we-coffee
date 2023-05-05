@@ -15,7 +15,7 @@ type HeaderProps = {
   variant?: 'primary' | 'transparent'
 }
 export function Header({ variant = 'transparent' }: HeaderProps) {
-  const { cart } = useContext(CartContext)
+  const { cart, address } = useContext(CartContext)
 
   return (
     <header className={clsx({ 'bg-primary-700': variant === 'primary' })}>
@@ -47,7 +47,7 @@ export function Header({ variant = 'transparent' }: HeaderProps) {
           <div className="flex items-center justify-center gap-2">
             <span className="p-2 flex  items-center justify-center gap-2 bg-primary-100 text-primary-700 font-bold">
               <MapPin size={24} weight="fill" />
-              São Paulo, SP
+              {address.city !== '' && `${address.city}, ${address.state}`}
             </span>
             <NavLink
               to="/carrinho"
