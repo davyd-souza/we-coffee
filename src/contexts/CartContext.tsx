@@ -2,13 +2,14 @@
 import { ReactNode, createContext, useEffect, useReducer } from 'react'
 
 // REDUCER
-import { cartReducer, CartType } from 'reducers/cart/reducer'
+import { AddressType, cartReducer, CartType } from 'reducers/cart/reducer'
 import {
   addCartItemAction,
   changeCartItemInputQuantityAction,
   decrementCartItemQuantityAction,
   incrementCartItemQuantityAction,
   removeCartItemAction,
+  updateAddressAction,
 } from 'reducers/cart/actions'
 
 // TYPE
@@ -20,6 +21,8 @@ type CartContextType = {
   decrementCartItemQuantity: (cartItemId: string) => void
   changeCartItemInputQuantity: (cartItemId: string, value: number) => void
   totalPriceCart: number
+  address: AddressType
+  updateAddress: (address: AddressType) => void
 }
 
 type CartContextProviderType = {
@@ -67,6 +70,15 @@ export function CartContextProvider({ children }: CartContextProviderType) {
         // },
       ],
       totalPriceCart: 0,
+      address: {
+        zip: '',
+        street: '',
+        number: '',
+        complement: '',
+        neighborhood: '',
+        city: '',
+        state: '',
+      },
     },
     (initialState) => {
       const storedCartStateJSON = localStorage.getItem(
@@ -82,12 +94,14 @@ export function CartContextProvider({ children }: CartContextProviderType) {
   )
 
   useEffect(() => {
+    console.log('[CartContext > useEffect > cartState]', cartState)
+
     const stateJSON = JSON.stringify(cartState)
 
     localStorage.setItem('@we-coffee:cartState-1.0.0', stateJSON)
   }, [cartState])
 
-  const { cart, totalPriceCart } = cartState
+  const { cart, totalPriceCart, address } = cartState
 
   const addCartItem = (cartItem: CartType) => {
     if (cartItem.quantity === 0) {
@@ -113,9 +127,9 @@ export function CartContextProvider({ children }: CartContextProviderType) {
     dispatch(changeCartItemInputQuantityAction(cartItemId, value))
   }
 
-  useEffect(() => {
-    console.log('[CartContext > useEffect > cart]', cart)
-  }, [cart])
+  const updateAddress = (address: AddressType) => {
+    dispatch(updateAddressAction(address))
+  }
 
   return (
     <CartContext.Provider
@@ -127,6 +141,8 @@ export function CartContextProvider({ children }: CartContextProviderType) {
         decrementCartItemQuantity,
         changeCartItemInputQuantity,
         totalPriceCart,
+        address,
+        updateAddress,
       }}
     >
       {children}

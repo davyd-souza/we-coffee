@@ -1,5 +1,5 @@
 // REDUCER
-import { CartType } from './reducer'
+import { AddressType, CartType } from './reducer'
 
 // TYPE
 export enum CartActionTypes {
@@ -8,6 +8,7 @@ export enum CartActionTypes {
   INCREMENT_CART_ITEM_QUANTITY = 'INCREMENT_CART_ITEM_QUANTITY',
   DECREMENT_CART_ITEM_QUANTITY = 'DECREMENT_CART_ITEM_QUANTITY',
   CHANGE_CART_ITEM_INPUT_QUANTITY = 'CHANGE_CART_ITEM_INPUT_QUANTITY',
+  UPDATE_ADDRESS = 'UPDATE_ADDRESS',
 }
 
 export function addCartItemAction(cartItem: CartType) {
@@ -55,6 +56,15 @@ export function changeCartItemInputQuantityAction(
     payload: {
       cartItemId,
       value,
+    },
+  }
+}
+
+export function updateAddressAction(address: AddressType) {
+  return {
+    type: CartActionTypes.UPDATE_ADDRESS,
+    payload: {
+      address,
     },
   }
 }

@@ -11,9 +11,20 @@ export type CartType = {
   quantity: number
 }
 
+export type AddressType = {
+  zip: string
+  street: string
+  number: string
+  complement?: string
+  neighborhood: string
+  city: string
+  state: string
+}
+
 type CartState = {
   cart: CartType[]
   totalPriceCart: number
+  address: AddressType
 }
 
 export function cartReducer(state: CartState, action: any) {
@@ -96,6 +107,12 @@ export function cartReducer(state: CartState, action: any) {
           (acc, current) => acc + current.price * current.quantity,
           0,
         )
+      })
+    }
+
+    case CartActionTypes.UPDATE_ADDRESS: {
+      return produce(state, (draft) => {
+        draft.address = action.payload.address
       })
     }
     default:
