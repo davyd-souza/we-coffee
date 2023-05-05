@@ -6,7 +6,7 @@ const PRODUCT_DATA = {
       description: 'Encorpado com notas de castanhas e chocolate meio-amargo.',
       amount: '30ml',
       price: 6,
-      image: 'http://localhost:5173/assets/images/cafe/quente/espresso.webp',
+      image: '/assets/images/cafe/quente/espresso.webp',
       label: ['Quente'],
     },
     {
@@ -16,7 +16,7 @@ const PRODUCT_DATA = {
         'Espresso duplo, suavizado com água. Encorpado com notas de castanhas e chocolate meio-amargo.',
       amount: '360ml',
       price: 9,
-      image: 'http://localhost:5173/assets/images/cafe/quente/americano.webp',
+      image: '/assets/images/cafe/quente/americano.webp',
       label: ['Quente'],
     },
     {
@@ -26,7 +26,7 @@ const PRODUCT_DATA = {
         'Coado em V60. Blend I – Doce e floral, Blend II – Doce e encorpado, Blend III – Elegante e frutado.',
       amount: '360ml',
       price: 18,
-      image: 'http://localhost:5173/assets/images/cafe/quente/coado.webp',
+      image: '/assets/images/cafe/quente/coado.webp',
       label: ['Quente'],
     },
     {
@@ -35,7 +35,7 @@ const PRODUCT_DATA = {
       description: 'Estilo Italiano. Espresso duplo, Leite e Crema.',
       amount: '360ml',
       price: 14,
-      image: 'http://localhost:5173/assets/images/cafe/quente/cappuccino.webp',
+      image: '/assets/images/cafe/quente/cappuccino.webp',
       label: ['Quente'],
     },
     {
@@ -44,8 +44,7 @@ const PRODUCT_DATA = {
       description: 'Espresso duplo, calda de caramelo e Leite.',
       amount: '360ml',
       price: 15,
-      image:
-        'http://localhost:5173/assets/images/cafe/quente/caramelo-macchiato.webp',
+      image: '/assets/images/cafe/quente/caramelo-macchiato.webp',
       label: ['Quente'],
     },
     {
@@ -54,7 +53,7 @@ const PRODUCT_DATA = {
       description: 'Espresso duplo e leite vaporizado.',
       amount: '360ml',
       price: 14,
-      image: 'http://localhost:5173/assets/images/cafe/quente/flat-white.webp',
+      image: '/assets/images/cafe/quente/flat-white.webp',
       label: ['Quente'],
     },
     {
@@ -63,7 +62,7 @@ const PRODUCT_DATA = {
       description: 'Espresso duplo, leite e ganache de chocolate.',
       amount: '360ml',
       price: 15,
-      image: 'http://localhost:5173/assets/images/cafe/quente/mocha.webp',
+      image: '/assets/images/cafe/quente/mocha.webp',
       label: ['Quente'],
     },
     {
@@ -73,7 +72,7 @@ const PRODUCT_DATA = {
         'Espresso duplo, suavizado com água. Encorpado com notas de castanhas e chocolate meio-amargo.',
       amount: '360ml',
       price: 9,
-      image: 'http://localhost:5173/assets/images/cafe/gelado/americano.webp',
+      image: '/assets/images/cafe/gelado/americano.webp',
       label: ['Gelado'],
     },
     {
@@ -83,7 +82,7 @@ const PRODUCT_DATA = {
         'Coado em V60. Blend I – Doce e floral, Blend II – Doce e encorpado, Blend III – Elegante e frutado.',
       amount: '360ml',
       price: 18,
-      image: 'http://localhost:5173/assets/images/cafe/gelado/coado.webp',
+      image: '/assets/images/cafe/gelado/coado.webp',
       label: ['Gelado'],
     },
     {
@@ -92,8 +91,7 @@ const PRODUCT_DATA = {
       description: 'Espresso duplo, calda de caramelo e Leite.',
       amount: '360ml',
       price: 15,
-      image:
-        'http://localhost:5173/assets/images/cafe/gelado/caramelo-macchiato.webp',
+      image: '/assets/images/cafe/gelado/caramelo-macchiato.webp',
       label: ['Gelado'],
     },
     {
@@ -102,8 +100,7 @@ const PRODUCT_DATA = {
       description: 'Café extraído à frio e suco de limão.',
       amount: '360ml',
       price: 11,
-      image:
-        'http://localhost:5173/assets/images/cafe/gelado/cold-brew-limao.webp',
+      image: '/assets/images/cafe/gelado/cold-brew-limao.webp',
       label: ['Gelado'],
     },
     {
@@ -112,7 +109,7 @@ const PRODUCT_DATA = {
       description: 'Espresso e Leite.',
       amount: '360ml',
       price: 14,
-      image: 'http://localhost:5173/assets/images/cafe/gelado/latte.webp',
+      image: '/assets/images/cafe/gelado/latte.webp',
       label: ['Gelado'],
     },
     {
@@ -121,7 +118,7 @@ const PRODUCT_DATA = {
       description: 'Espresso, Leite e calda de chocolate.',
       amount: '360ml',
       price: 14,
-      image: 'http://localhost:5173/assets/images/cafe/gelado/mocha.webp',
+      image: '/assets/images/cafe/gelado/mocha.webp',
       label: ['Gelado'],
     },
     {
@@ -131,8 +128,7 @@ const PRODUCT_DATA = {
         'Bebida gelada à base de espresso, leite, chocolate branco e chantilly.',
       amount: '360ml',
       price: 18,
-      image:
-        'http://localhost:5173/assets/images/cafe/especial/gelado/vienna.webp',
+      image: '/assets/images/cafe/especial/gelado/vienna.webp',
       label: ['Especial', 'Gelado'],
     },
     {
@@ -141,8 +137,7 @@ const PRODUCT_DATA = {
       description: 'Bebida gelada à base de cold brew, tônica e maracujá.',
       amount: '360ml',
       price: 20,
-      image:
-        'http://localhost:5173/assets/images/cafe/especial/gelado/tropicalia.webp',
+      image: '/assets/images/cafe/especial/gelado/tropicalia.webp',
       label: ['Especial', 'Gelado'],
     },
     {
@@ -152,8 +147,7 @@ const PRODUCT_DATA = {
         'Chocolate quente, intenso e cremoso com um leve toque de especiarias.',
       amount: '360ml',
       price: 17,
-      image:
-        'http://localhost:5173/assets/images/cafe/especial/quente/double-hot.webp',
+      image: '/assets/images/cafe/especial/quente/double-hot.webp',
       label: ['Especial', 'Quente'],
     },
     {
@@ -163,8 +157,7 @@ const PRODUCT_DATA = {
         'Bebida gelada à base de espresso, leite e sorvete de baunilha.',
       amount: '360ml',
       price: 16,
-      image:
-        'http://localhost:5173/assets/images/cafe/especial/gelado/sublime.webp',
+      image: '/assets/images/cafe/especial/gelado/sublime.webp',
       label: ['Especial', 'Gelado'],
     },
     {
@@ -174,8 +167,7 @@ const PRODUCT_DATA = {
         'Bebida gelada à base de espresso, leite, creme mascarpone e biscoito champagne.',
       amount: '360ml',
       price: 16,
-      image:
-        'http://localhost:5173/assets/images/cafe/especial/gelado/latte-tiramisu.webp',
+      image: '/assets/images/cafe/especial/gelado/latte-tiramisu.webp',
       label: ['Especial', 'Gelado'],
     },
     {
@@ -185,8 +177,7 @@ const PRODUCT_DATA = {
         'Duplo Espresso, leite e creme de ovomaltine. Servido somente quente.',
       amount: '360ml',
       price: 17,
-      image:
-        'http://localhost:5173/assets/images/cafe/especial/quente/maltado.webp',
+      image: '/assets/images/cafe/especial/quente/maltado.webp',
       label: ['Especial', 'Quente'],
     },
     {
@@ -196,8 +187,7 @@ const PRODUCT_DATA = {
         'Bebida gelada à base de espresso, leite de aveia, pistache e creme vegetal.',
       amount: '360ml',
       price: 21,
-      image:
-        'http://localhost:5173/assets/images/cafe/especial/leite-aveia/al-green.webp',
+      image: '/assets/images/cafe/especial/leite-aveia/al-green.webp',
       label: ['Vegano', 'Gelado', 'Leite de Aveia'],
     },
     {
@@ -207,8 +197,7 @@ const PRODUCT_DATA = {
         'Bebida gelada à base de espresso, leite de aveia, leite de coco e castanha de cajú.',
       amount: '360ml',
       price: 21,
-      image:
-        'http://localhost:5173/assets/images/cafe/especial/quente/maltado.webp',
+      image: '/assets/images/cafe/especial/quente/maltado.webp',
       label: ['Vegano', 'Leite de Aveia', 'Gelado'],
     },
   ],
@@ -219,7 +208,7 @@ const PRODUCT_DATA = {
       description: 'Chá de Jasmin à base de água',
       amount: '480ml',
       price: 9,
-      image: 'http://localhost:5173/assets/images/cha/quente/jasmin.webp',
+      image: '/assets/images/cha/quente/jasmin.webp',
       label: ['Quente'],
     },
     {
@@ -229,7 +218,7 @@ const PRODUCT_DATA = {
         'Chá verde com morango, manga, pitaya, kiwi, limão, maracujá e blueberry.',
       amount: '480ml',
       price: 18,
-      image: 'http://localhost:5173/assets/images/cha/frui-tea/gelado/mix.webp',
+      image: '/assets/images/cha/frui-tea/gelado/mix.webp',
       label: ['Gelado'],
     },
     {
@@ -238,8 +227,7 @@ const PRODUCT_DATA = {
       description: 'Chá de limão Tahiti.',
       amount: '480ml',
       price: 12,
-      image:
-        'http://localhost:5173/assets/images/cha/frui-tea/gelado/limao.webp',
+      image: '/assets/images/cha/frui-tea/gelado/limao.webp',
       label: ['Gelado'],
     },
     {
@@ -248,8 +236,7 @@ const PRODUCT_DATA = {
       description: 'Chá verde com maracujá.',
       amount: '480ml',
       price: 14,
-      image:
-        'http://localhost:5173/assets/images/cha/frui-tea/gelado/maracuja.webp',
+      image: '/assets/images/cha/frui-tea/gelado/maracuja.webp',
       label: ['Gelado'],
     },
     {
@@ -258,8 +245,7 @@ const PRODUCT_DATA = {
       description: 'Chá preto, leite e bobo.',
       amount: '480ml',
       price: 19,
-      image:
-        'http://localhost:5173/assets/images/cha/milk-tea/quente/tradicional.webp',
+      image: '/assets/images/cha/milk-tea/quente/tradicional.webp',
       label: ['Quente'],
     },
     {
@@ -268,8 +254,7 @@ const PRODUCT_DATA = {
       description: 'Chá preto, leite e bobo agar agar.',
       amount: '480ml',
       price: 20,
-      image:
-        'http://localhost:5173/assets/images/cha/milk-tea/quente/agar-agar.webp',
+      image: '/assets/images/cha/milk-tea/quente/agar-agar.webp',
       label: ['Quente'],
     },
     {
@@ -279,8 +264,7 @@ const PRODUCT_DATA = {
         'Chá preto com leite, topping de creme e açúcar caramelizada.',
       amount: '480ml',
       price: 20,
-      image:
-        'http://localhost:5173/assets/images/cha/milk-tea/quente/brulee.webp',
+      image: '/assets/images/cha/milk-tea/quente/brulee.webp',
       label: ['Quente'],
     },
     {
@@ -290,8 +274,7 @@ const PRODUCT_DATA = {
         'Chá preto com leite, topping de creme, açúcar caramelizada e bobo agar agar.',
       amount: '480ml',
       price: 21,
-      image:
-        'http://localhost:5173/assets/images/cha/milk-tea/quente/brulee-agar-agar.webp',
+      image: '/assets/images/cha/milk-tea/quente/brulee-agar-agar.webp',
       label: ['Quente'],
     },
     {
@@ -300,8 +283,7 @@ const PRODUCT_DATA = {
       description: 'Chá preto, leite e bobo.',
       amount: '360ml',
       price: 19,
-      image:
-        'http://localhost:5173/assets/images/cha/milk-tea/gelado/tradicional.webp',
+      image: '/assets/images/cha/milk-tea/gelado/tradicional.webp',
       label: ['Gelado'],
     },
     {
@@ -311,8 +293,7 @@ const PRODUCT_DATA = {
         'Chá preto com leite, bobo agar agar, topping de creme e açúcar caramelizada.',
       amount: '360ml',
       price: 20,
-      image:
-        'http://localhost:5173/assets/images/cha/milk-tea/gelado/agar-agar.webp',
+      image: '/assets/images/cha/milk-tea/gelado/agar-agar.webp',
       label: ['Gelado'],
     },
     {
@@ -322,8 +303,7 @@ const PRODUCT_DATA = {
         'Chá preto com leite, topping de creme e açúcar caramelizada.',
       amount: '360ml',
       price: 20,
-      image:
-        'http://localhost:5173/assets/images/cha/milk-tea/gelado/brulee.webp',
+      image: '/assets/images/cha/milk-tea/gelado/brulee.webp',
       label: ['Gelado'],
     },
     {
@@ -333,8 +313,7 @@ const PRODUCT_DATA = {
         'Chá preto com leite, bobo agar agar, topping de creme e açúcar caramelizada.',
       amount: '360ml',
       price: 21,
-      image:
-        'http://localhost:5173/assets/images/cha/milk-tea/gelado/brulee-agar-agar.webp',
+      image: '/assets/images/cha/milk-tea/gelado/brulee-agar-agar.webp',
       label: ['Gelado'],
     },
   ],
@@ -346,8 +325,7 @@ const PRODUCT_DATA = {
         'Shake a base de sorvete, com um delicioso creme de pistache, coberto com calda de caramelo, finalizado com pistache.',
       amount: '480ml',
       price: 28,
-      image:
-        'http://localhost:5173/assets/images/milk-shake/gelado/copacabana.webp',
+      image: '/assets/images/milk-shake/gelado/copacabana.webp',
       label: ['Gelado'],
     },
     {
@@ -357,7 +335,7 @@ const PRODUCT_DATA = {
         'Shake de Lótus, com sorvete de baunilha madagascar, cobertura de chantilly e calda de caramelo, finalizada com biscoito e caramelo.',
       amount: '480ml',
       price: 22,
-      image: 'http://localhost:5173/assets/images/milk-shake/gelado/lotus.webp',
+      image: '/assets/images/milk-shake/gelado/lotus.webp',
       label: ['Gelado'],
     },
     {
@@ -367,8 +345,7 @@ const PRODUCT_DATA = {
         'Shake de chocolate, com biscoito Oreo, Pocky, picolé com casquinha de chocolate, sorvete de baunilha e cobertura de chocolate belga.',
       amount: '480ml',
       price: 26,
-      image:
-        'http://localhost:5173/assets/images/milk-shake/gelado/choco-boom.webp',
+      image: '/assets/images/milk-shake/gelado/choco-boom.webp',
       label: ['Gelado'],
     },
     {
@@ -378,8 +355,7 @@ const PRODUCT_DATA = {
         'Shake de morango, Sorvete de baunilha Madagascar, Purê de morango; Chantilly e cranberry em pó.',
       amount: '480ml',
       price: 20,
-      image:
-        'http://localhost:5173/assets/images/milk-shake/gelado/morango.webp',
+      image: '/assets/images/milk-shake/gelado/morango.webp',
       label: ['Gelado'],
     },
     {
@@ -389,8 +365,7 @@ const PRODUCT_DATA = {
         'Shake de blueberry, Sorvete de baunilha Madagascar, Purê de blueberry, Chantilly, Blueberry fresco e Blueberry em pó.',
       amount: '480ml',
       price: 22,
-      image:
-        'http://localhost:5173/assets/images/milk-shake/gelado/blueberry.webp',
+      image: '/assets/images/milk-shake/gelado/blueberry.webp',
       label: ['Gelado'],
     },
     {
@@ -399,7 +374,7 @@ const PRODUCT_DATA = {
       description: 'Frapê de biscoito Oreo, com topping de Oreo.',
       amount: '360ml',
       price: 20,
-      image: 'http://localhost:5173/assets/images/milk-shake/gelado/oreo.webp',
+      image: '/assets/images/milk-shake/gelado/oreo.webp',
       label: ['Gelado'],
     },
     {
@@ -408,8 +383,7 @@ const PRODUCT_DATA = {
       description: 'Frapê de ovomaltine com Ovomaltine crocante.',
       amount: '360ml',
       price: 20,
-      image:
-        'http://localhost:5173/assets/images/milk-shake/gelado/ovomaltine.webp',
+      image: '/assets/images/milk-shake/gelado/ovomaltine.webp',
       label: ['Gelado'],
     },
     {
@@ -418,7 +392,7 @@ const PRODUCT_DATA = {
       description: 'Bebida de biscoito Oreo com topping de Oreo.',
       amount: '480ml',
       price: 20,
-      image: 'http://localhost:5173/assets/images/milk-shake/quente/oreo.webp',
+      image: '/assets/images/milk-shake/quente/oreo.webp',
       label: ['Quente'],
     },
     {
@@ -427,8 +401,7 @@ const PRODUCT_DATA = {
       description: 'Bebida de Ovomaltine com Ovomaltine crocante.',
       amount: '480ml',
       price: 20,
-      image:
-        'http://localhost:5173/assets/images/milk-shake/quente/ovomaltine.webp',
+      image: '/assets/images/milk-shake/quente/ovomaltine.webp',
       label: ['Quente'],
     },
   ],
@@ -440,7 +413,7 @@ const PRODUCT_DATA = {
         'Smoothie de caqui a base de chá de jasmin, com pedaços de caqui frescos e salty cream.',
       amount: '480ml',
       price: 22,
-      image: 'http://localhost:5173/assets/images/salty-cream/caqui.webp',
+      image: '/assets/images/salty-cream/caqui.webp',
       label: ['Gelado'],
     },
     {
@@ -450,7 +423,7 @@ const PRODUCT_DATA = {
         'Smoothie de morango, pedaços de morangos frescos, a base de chá de jasmin e salty cream.',
       amount: '480ml',
       price: 18,
-      image: 'http://localhost:5173/assets/images/salty-cream/morango.webp',
+      image: '/assets/images/salty-cream/morango.webp',
       label: ['Gelado'],
     },
     {
@@ -460,7 +433,7 @@ const PRODUCT_DATA = {
         'Smoothie de manga a base de chá de Jasmin, com purê de manga fresca e salty cream',
       amount: '480ml',
       price: 18,
-      image: 'http://localhost:5173/assets/images/salty-cream/manga.webp',
+      image: '/assets/images/salty-cream/manga.webp',
       label: ['Gelado'],
     },
     {
@@ -470,7 +443,7 @@ const PRODUCT_DATA = {
         'Smoothie de manga e leite de coco, bobo agar agar e salty cream.',
       amount: '480ml',
       price: 19,
-      image: 'http://localhost:5173/assets/images/salty-cream/manga-coco.webp',
+      image: '/assets/images/salty-cream/manga-coco.webp',
       label: ['Gelado'],
     },
     {
@@ -480,8 +453,7 @@ const PRODUCT_DATA = {
         'Smoothie de blueberry e morangos, a base de chá de jasmin e coberto com salty cream.',
       amount: '480ml',
       price: 19,
-      image:
-        'http://localhost:5173/assets/images/salty-cream/blueberry-duo.webp',
+      image: '/assets/images/salty-cream/blueberry-duo.webp',
       label: ['Gelado'],
     },
     {
@@ -491,8 +463,7 @@ const PRODUCT_DATA = {
         'Smoothie de framboesa e morango a base de chá de jasmin, com pure de framboesa e morango e cobertura de salty cream.',
       amount: '480ml',
       price: 19,
-      image:
-        'http://localhost:5173/assets/images/salty-cream/framboesa-duo.webp',
+      image: '/assets/images/salty-cream/framboesa-duo.webp',
       label: ['Gelado'],
     },
     {
@@ -502,8 +473,7 @@ const PRODUCT_DATA = {
         'Smoothie de frutas vermelhas, morango, blueberry, amora, framboesa a base de chá de Jasmin e cobertura de salty cream.',
       amount: '480ml',
       price: 19,
-      image:
-        'http://localhost:5173/assets/images/salty-cream/frutas-vermelhas.webp',
+      image: '/assets/images/salty-cream/frutas-vermelhas.webp',
       label: ['Gelado'],
     },
   ],
@@ -514,7 +484,7 @@ const PRODUCT_DATA = {
       description: 'Croissant com amêndoas laminadas.',
       // amount: '480ml',
       price: 16,
-      image: 'http://localhost:5173/assets/images/pao/croissant-amendoa.webp',
+      image: '/assets/images/pao/croissant-amendoa.webp',
       label: ['Salgado'],
     },
     {
@@ -524,8 +494,7 @@ const PRODUCT_DATA = {
         'Recheado de creme de amêndoas com nutella e finalizado com lâminas de amêndoas.',
       // amount: '480ml',
       price: 16,
-      image:
-        'http://localhost:5173/assets/images/pao/croissant-choco-amendoa.webp',
+      image: '/assets/images/pao/croissant-choco-amendoa.webp',
       label: ['Doce'],
     },
     {
@@ -535,7 +504,7 @@ const PRODUCT_DATA = {
         'Croissant com tomate, muçarela, tomate, rúcula, bacon e ketchup.',
       // amount: '480ml',
       price: 17,
-      image: 'http://localhost:5173/assets/images/pao/croissant-bacon.webp',
+      image: '/assets/images/pao/croissant-bacon.webp',
       label: ['Salgado'],
     },
     {
@@ -545,7 +514,7 @@ const PRODUCT_DATA = {
         'Croissant de massa folhada artesanal, cream cheese, salame e rúcula.',
       // amount: '480ml',
       price: 17,
-      image: 'http://localhost:5173/assets/images/pao/croissant-salame.webp',
+      image: '/assets/images/pao/croissant-salame.webp',
       label: ['Salgado'],
     },
     {
@@ -554,8 +523,7 @@ const PRODUCT_DATA = {
       description: 'Croissant tradicional sem recheio.',
       // amount: '480ml',
       price: 10,
-      image:
-        'http://localhost:5173/assets/images/pao/croissant-tradicional.webp',
+      image: '/assets/images/pao/croissant-tradicional.webp',
       label: ['Salgado'],
     },
     {
@@ -564,8 +532,7 @@ const PRODUCT_DATA = {
       description: 'Baguete, presunto cru, rúcula e molho pesto.',
       // amount: '480ml',
       price: 18,
-      image:
-        'http://localhost:5173/assets/images/pao/baguete-presunto_cru-pesto.webp',
+      image: '/assets/images/pao/baguete-presunto_cru-pesto.webp',
       label: ['Salgado'],
     },
     {
@@ -574,8 +541,7 @@ const PRODUCT_DATA = {
       description: 'Baguete, bresaola, molho de trufa negra e rúcula.',
       // amount: '480ml',
       price: 20,
-      image:
-        'http://localhost:5173/assets/images/pao/baguete-bresaola-trufas.webp',
+      image: '/assets/images/pao/baguete-bresaola-trufas.webp',
       label: ['Salgado'],
     },
     {
@@ -585,8 +551,7 @@ const PRODUCT_DATA = {
         'Massa folhada crocante, recheado com creme de queijo trufado e pequenas lascas de presunto cru.',
       // amount: '480ml',
       price: 17,
-      image:
-        'http://localhost:5173/assets/images/pao/cannoli-parma-trufado.webp',
+      image: '/assets/images/pao/cannoli-parma-trufado.webp',
       label: ['Salgado'],
     },
     {
@@ -596,7 +561,7 @@ const PRODUCT_DATA = {
         'Massa folhada crocante, com recheio suave a base de creme de baunilha e chocolate ao leite, coberto com chocolate dark e crispearl crocante.',
       // amount: '480ml',
       price: 17,
-      image: 'http://localhost:5173/assets/images/pao/cannoli-dark.webp',
+      image: '/assets/images/pao/cannoli-dark.webp',
       label: ['Doce'],
     },
     {
@@ -606,7 +571,7 @@ const PRODUCT_DATA = {
         'Massa folhada crocante, com recheio suave a base de creme de baunilha e chocolate branco, coberto com chocolate branco e crocante de pistache.',
       // amount: '480ml',
       price: 17,
-      image: 'http://localhost:5173/assets/images/pao/cannoli-cream.webp',
+      image: '/assets/images/pao/cannoli-cream.webp',
       label: ['Doce'],
     },
     {
@@ -616,7 +581,7 @@ const PRODUCT_DATA = {
         'Massa fofinha com laranja cristalizada, recheada com ganache de chocolate, finalizado com cacau em pó e crispearl de chocolate callebaut.',
       // amount: '480ml',
       price: 16,
-      image: 'http://localhost:5173/assets/images/pao/dirty-soft-bun.webp',
+      image: '/assets/images/pao/dirty-soft-bun.webp',
       label: ['Doce'],
     },
     {
@@ -626,7 +591,7 @@ const PRODUCT_DATA = {
         'Massa fofinha e artesanal à base de matcha, recheado com o mais leve e puro creme de baunilha, finalizado com a dupla de frutas perfeita: kiwi e pêssego amarelo.',
       // amount: '480ml',
       price: 16,
-      image: 'http://localhost:5173/assets/images/pao/magic-stick-wi.webp',
+      image: '/assets/images/pao/magic-stick-wi.webp',
       label: ['Doce'],
     },
     {
@@ -636,7 +601,7 @@ const PRODUCT_DATA = {
         'Massa de pitaya vermelha recheada com creme de frutas vermelhas e morangos frescos.',
       // amount: '480ml',
       price: 16,
-      image: 'http://localhost:5173/assets/images/pao/magic-stick-morango.webp',
+      image: '/assets/images/pao/magic-stick-morango.webp',
       label: ['Doce'],
     },
     {
@@ -645,7 +610,7 @@ const PRODUCT_DATA = {
       description: 'Massa de Oreo com recheio de chocolate e biscoitos oreo.',
       // amount: '480ml',
       price: 16,
-      image: 'http://localhost:5173/assets/images/pao/magic-stick-oreo.webp',
+      image: '/assets/images/pao/magic-stick-oreo.webp',
       label: ['Doce'],
     },
     {
@@ -655,7 +620,7 @@ const PRODUCT_DATA = {
         'Pão de fermentação natural, com molho agridoce, recheado com creme cheese, alho, parmesão ralado e salsinha.',
       // amount: '480ml',
       price: 16,
-      image: 'http://localhost:5173/assets/images/pao/soft-bun-alho.webp',
+      image: '/assets/images/pao/soft-bun-alho.webp',
       label: ['Salgado'],
     },
     {
@@ -665,8 +630,7 @@ const PRODUCT_DATA = {
         'Pão de fermentação natural de parmesão, muçarela, bacon, rúcula, maionese e ketchup.',
       // amount: '480ml',
       price: 17,
-      image:
-        'http://localhost:5173/assets/images/pao/soft-bun-bacon-rucula.webp',
+      image: '/assets/images/pao/soft-bun-bacon-rucula.webp',
       label: ['Salgado'],
     },
     {
@@ -676,7 +640,7 @@ const PRODUCT_DATA = {
         'Pão de fermentação natural, com salsicha (carne bovina e suína), creme de queijo, coberto com mussarela, finalizado com milho e salsinha.',
       // amount: '480ml',
       price: 18,
-      image: 'http://localhost:5173/assets/images/pao/soft-bun-salsicha.webp',
+      image: '/assets/images/pao/soft-bun-salsicha.webp',
       label: ['Salgado'],
     },
     {
@@ -686,7 +650,7 @@ const PRODUCT_DATA = {
         'Pão de forma com bacon, queijo mussarela, tomate, ovo e maionese.',
       // amount: '480ml',
       price: 11,
-      image: 'http://localhost:5173/assets/images/pao/sanduiche-bacon.webp',
+      image: '/assets/images/pao/sanduiche-bacon.webp',
       label: ['Salgado'],
     },
     {
@@ -696,7 +660,7 @@ const PRODUCT_DATA = {
         'Massa fofinha amanteigada, levemente adocicado com parmesão.',
       // amount: '480ml',
       price: 30,
-      image: 'http://localhost:5173/assets/images/pao/pao_forma-parmesao.webp',
+      image: '/assets/images/pao/pao_forma-parmesao.webp',
       label: ['Salgado'],
     },
     {
@@ -706,7 +670,7 @@ const PRODUCT_DATA = {
         'Massa fofinha amanteigada, com recheio especial de coco cremoso.',
       // amount: '480ml',
       price: 30,
-      image: 'http://localhost:5173/assets/images/pao/pao_forma-coco.webp',
+      image: '/assets/images/pao/pao_forma-coco.webp',
       label: ['Doce'],
     },
   ],
@@ -718,7 +682,7 @@ const PRODUCT_DATA = {
         'Mousse de cream cheese, recheio de baunilha com ganache de pistache e bolo de chocolate.',
       // amount: '480ml',
       price: 22,
-      image: 'http://localhost:5173/assets/images/doce/rabbit.webp',
+      image: '/assets/images/doce/rabbit.webp',
       // label: ['Doce'],
     },
     {
@@ -728,7 +692,7 @@ const PRODUCT_DATA = {
         'Pistache em todos os detalhes: mousse, recheio cremoso, recheio crocante e biscoito amanteigado, além de um glaciado com chocolate branco.',
       // amount: '480ml',
       price: 26,
-      image: 'http://localhost:5173/assets/images/doce/big-pistachio.webp',
+      image: '/assets/images/doce/big-pistachio.webp',
       // label: ['Doce'],
     },
     {
@@ -738,7 +702,7 @@ const PRODUCT_DATA = {
         'Mousse de chocolate branco e baunilha com recheio de ganache de chocolate belga ao leite e cremoso de banana, finalizada com base crocante de chocolate com avelã.',
       // amount: '480ml',
       price: 23,
-      image: 'http://localhost:5173/assets/images/doce/yellow-bee.webp',
+      image: '/assets/images/doce/yellow-bee.webp',
       // label: ['Doce'],
     },
     {
@@ -748,7 +712,7 @@ const PRODUCT_DATA = {
         'Mousse cremosa de chocolate 54%, com ganache de chocolate e toque de cointreau, crocante de avelã e bolo de chocolate.',
       // amount: '480ml',
       price: 22,
-      image: 'http://localhost:5173/assets/images/doce/violet-et-blanc.webp',
+      image: '/assets/images/doce/violet-et-blanc.webp',
       // label: ['Doce'],
     },
     {
@@ -758,7 +722,7 @@ const PRODUCT_DATA = {
         'Mousse de limão com recheio de limão, coberto de chocolate branco em uma base crocante de biscoito de amêndoas.',
       // amount: '480ml',
       price: 25,
-      image: 'http://localhost:5173/assets/images/doce/one-lemon.webp',
+      image: '/assets/images/doce/one-lemon.webp',
       // label: ['Doce'],
     },
     {
@@ -768,7 +732,7 @@ const PRODUCT_DATA = {
         'Creme de mascarpone, com recheio de chocolate e framboesa, em uma base crocante de chocolate branco e amêndoas.',
       // amount: '480ml',
       price: 25,
-      image: 'http://localhost:5173/assets/images/doce/pandinha-pan.webp',
+      image: '/assets/images/doce/pandinha-pan.webp',
       // label: ['Doce'],
     },
     {
@@ -778,8 +742,7 @@ const PRODUCT_DATA = {
         'Mousse de chocolate ao leite, recheio levinho de chá Ceylon e crocante de crispearl de chocolate.',
       // amount: '480ml',
       price: 18,
-      image:
-        'http://localhost:5173/assets/images/doce/ursinho-brown-mousse.webp',
+      image: '/assets/images/doce/ursinho-brown-mousse.webp',
       // label: ['Doce'],
     },
     {
@@ -789,7 +752,7 @@ const PRODUCT_DATA = {
         'Mousse de chocolate branco, com recheio de geleia de morango e bolo chiffon.',
       // amount: '480ml',
       price: 15,
-      image: 'http://localhost:5173/assets/images/doce/entremet-coracao.webp',
+      image: '/assets/images/doce/entremet-coracao.webp',
       // label: ['Doce'],
     },
   ],
@@ -800,7 +763,7 @@ const PRODUCT_DATA = {
       description: 'Água mineral natural sem gás.',
       amount: '250ml',
       price: 10,
-      image: 'http://localhost:5173/assets/images/agua/agua-mineral-panna.webp',
+      image: '/assets/images/agua/agua-mineral-panna.webp',
       label: ['Sem gás'],
     },
     {
@@ -809,8 +772,7 @@ const PRODUCT_DATA = {
       description: 'Água mineral natural com gás.',
       amount: '250ml',
       price: 10,
-      image:
-        'http://localhost:5173/assets/images/agua/agua-mineral-s-pellegrino.webp',
+      image: '/assets/images/agua/agua-mineral-s-pellegrino.webp',
       label: ['Com gás'],
     },
   ],
