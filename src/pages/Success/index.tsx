@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 
 // ASSET
 import { Clock, CurrencyDollar, MapPin } from 'phosphor-react'
-import onTheWay from '@assets/on-the-way.svg'
+import { ReactComponent as OnTheWay } from '@assets/on-the-way.svg'
 
 export function Success() {
   const { state } = useLocation()
@@ -76,10 +76,7 @@ export function Success() {
       </section>
 
       <section>
-        <img
-          src={onTheWay}
-          alt="Person riding a motorcycle with a delivery package"
-        />
+        <OnTheWay className="max-w-full max-h-full" />
       </section>
     </main>
   )
