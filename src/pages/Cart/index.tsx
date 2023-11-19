@@ -80,8 +80,6 @@ export function Cart() {
       })),
     }
 
-    console.log('[Cart > handleCreateNewOrder > order]', order)
-
     navigate('/sucesso', {
       state: {
         ...order,
