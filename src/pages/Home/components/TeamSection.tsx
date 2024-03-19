@@ -22,7 +22,7 @@ export function TeamSection() {
           </a>
         </div>
         <img
-          className="max-w-[30rem]"
+          className="max-w-[30rem] w-full"
           src={teamImg}
           alt="Person delivering a paper bag and a cup"
         />
